@@ -238,19 +238,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/olesya/.nuget/packages/": {}
+    "C:\\Users\\jon4t\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/olesya/RiderProjects/jeu_monstre/jeu_monstre.csproj",
-      "projectName": "jeu_monstre",
-      "projectPath": "/Users/olesya/RiderProjects/jeu_monstre/jeu_monstre.csproj",
-      "packagesPath": "/Users/olesya/.nuget/packages/",
-      "outputPath": "/Users/olesya/RiderProjects/jeu_monstre/obj/",
+      "projectUniqueName": "C:\\Users\\jon4t\\RiderProjects\\BasicMonoGame\\BasicMonoGame.csproj",
+      "projectName": "BasicMonoGame",
+      "projectPath": "C:\\Users\\jon4t\\RiderProjects\\BasicMonoGame\\BasicMonoGame.csproj",
+      "packagesPath": "C:\\Users\\jon4t\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jon4t\\RiderProjects\\BasicMonoGame\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/olesya/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\jon4t\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -272,7 +272,7 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "direct"
+        "auditMode": "all"
       }
     },
     "frameworks": {
@@ -299,12 +299,30 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[8.0.10, 8.0.10]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[8.0.10, 8.0.10]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[8.0.10, 8.0.10]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[8.0.10, 8.0.10]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/8.0.404/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-rc.2.24474.11/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
