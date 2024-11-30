@@ -9,12 +9,11 @@ namespace BasicMonoGame;
 public class Game1 : Game
 {
     private GraphicsDeviceManager _graphics;
-    private SpriteBatch _spriteBatch;
+    
     private Player _ship;//instance de Player
     
-    List<Creature> _sprites;
-    List<Creature> _killcreatures;
     List<Projectile> _projectiles;
+    List<Projectile> _killprojectiles;
     
     Timer time = new Timer();
     
@@ -28,23 +27,21 @@ public class Game1 : Game
 
     protected override void Initialize()
     {
-        // TODO: Add your initialization logic here
-
+   
+        Global._Content = Content;
+        CreatureManager.Init();
         base.Initialize();
     }
 
     protected override void LoadContent()
     {
-        _spriteBatch = new SpriteBatch(GraphicsDevice);
+        Global._spriteBatch = new SpriteBatch(GraphicsDevice);
         Texture2D shipTexture = Content.Load < Texture2D >("ship2") ;
         _ship = new Player( shipTexture , new Vector2 (250 , 720),80 ) ;
         // TODO: use this.Content to load your game content here
-        _sprites = new List<Creature>();
-        Texture2D creatureTexture = Content.Load < Texture2D >("virus1") ;
-        _sprites.Add(new Creature(TypeCreature.Petit,creatureTexture, new Vector2 (250 , 50),100 ));
         //Texture2D projectileTexture = Content.Load < Texture2D >("missile1") ;
         _projectiles = new List<Projectile>();
-        _killcreatures = new List<Creature>();
+        _killprojectiles = new List<Projectile>();
     }
 
     protected override void Update(GameTime gameTime)
@@ -63,15 +60,16 @@ public class Game1 : Game
 
         
         _ship.Update(gameTime,_projectiles, (Content.Load<Texture2D>("missile1")));
-        (x, y) = _ship.getPos();
         
         foreach (var p in _projectiles)
         {
             p.Update(gameTime); 
         }
 
-
         
+        (x, y) = _ship.getPos();
+        
+
         if (x >= Window.ClientBounds.Width - (_ship._Rect.Width / 2) )
         {
             x = Window.ClientBounds.Width - (_ship._Rect.Width / 2);
@@ -83,13 +81,14 @@ public class Game1 : Game
             x = (_ship._Rect.Width/2);
             _ship.setPos(x,y);
         }
+        CreatureManager.Update(gameTime);
         
-        foreach (var s in _sprites)
+        foreach (var s in CreatureManager._Creatures)
         {
             s.Update(gameTime);
             if (s.getPos().Y >= 600)
             {
-                _killcreatures.Add(s);
+                s._Health = 0;
             }
             else
             {
@@ -97,15 +96,22 @@ public class Game1 : Game
                 {
                     if (p._Rect.Intersects(s._Rect))
                     {
-                        _killcreatures.Add(s);
+                        _killprojectiles.Add(p);
+                        s._Health = 0;
+                    }
+
+                    if (p._Rect.Top < 0)
+                    {
+                        _killprojectiles.Add(p);
                     }
                 }
             }
         }
-
-        foreach (var m in _killcreatures)
+        
+        
+        foreach (var p in _killprojectiles)
         {
-            _sprites.Remove(m);
+            _projectiles.Remove(p);
         }
         
         base.Update(gameTime);
@@ -118,17 +124,16 @@ public class Game1 : Game
         GraphicsDevice.Clear(Color.CornflowerBlue);
 
         // TODO: Add your drawing code here
-        _spriteBatch.Begin(samplerState : SamplerState.PointClamp); 
-        _ship.Draw(_spriteBatch);
-        foreach (var s in _sprites)
-        {
-            s.Draw(_spriteBatch);
-        }
+        Global._spriteBatch.Begin(samplerState : SamplerState.PointClamp); 
+        _ship.Draw(Global._spriteBatch);
+        
+        CreatureManager.Draw();
+        
         foreach (var p in _projectiles)
         {
-            p.Draw(_spriteBatch);
+            p.Draw(Global._spriteBatch);
         }
-        _spriteBatch.End();
+        Global._spriteBatch.End();
         base.Draw(gameTime);
     }
 }

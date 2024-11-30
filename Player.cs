@@ -7,6 +7,8 @@ namespace BasicMonoGame;
 
 public class Player : GameObject
 {
+    private static float _shootTime;
+    private static float _shootCooldown = 0.15f;
     
     private int sizeMax = 100;
     public Player(Texture2D texture, Vector2 position, int size) : base(texture, position, size)
@@ -21,29 +23,24 @@ public class Player : GameObject
     {
         if (Keyboard.GetState().IsKeyDown(Keys.Right))
         {
-            _speed.X += 1.1f;
+            _speed.X += 0.5f;
         }
 
         if (Keyboard.GetState().IsKeyDown(Keys.Left))
         {
-            _speed.X -= 1.1f;
+            _speed.X -= 0.5f;
         }
 
         if (Keyboard.GetState().IsKeyDown(Keys.X))
         {
-            bullets.Add(new Projectile(projectileTexture,this.getPos(),20));
+            _shootTime -= (float)gameTime.ElapsedGameTime.TotalSeconds;
+            if (_shootTime<=0 && bullets.Count<15)
+            {
+                bullets.Add(new Projectile(projectileTexture, this.getPos(), 20));
+                _shootTime = _shootCooldown;
+            }
         }
-
-   /*     if (Keyboard.GetState().IsKeyDown(Keys.Down))
-        {
-            _speed.Y += 0.5f;
-        }
-
-        if (Keyboard.GetState().IsKeyDown(Keys.Up))
-        {
-            _speed.Y -= 0.5f;
-        }
-        */
+        
 
         _position.X = _position.X + _speed.X;
         _position.Y = _position.Y + _speed.Y;
