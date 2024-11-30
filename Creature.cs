@@ -5,6 +5,7 @@ namespace BasicMonoGame;
 
 public class Creature : GameObject
 {
+
     public int _Health { get; set; }
     
     public Creature(TypeCreature creature, Texture2D texture, Vector2 position, int size) : base(texture, position, size)
@@ -24,5 +25,10 @@ public class Creature : GameObject
     public void Update(GameTime gameTime)
     {
         _position.Y += 1+_speed.Y;
+    }
+    
+    public void Draw()
+    {
+        base.Draw(Global._spriteBatch);
     }
 }
