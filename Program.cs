@@ -1,2 +1,2 @@
-﻿using var game = new jeu_monstre.Game1();
+﻿using var game = new BasicMonoGame.Game1();
 game.Run();
