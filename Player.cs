@@ -36,7 +36,7 @@ public class Player : GameObject
             _shootTime -= (float)gameTime.ElapsedGameTime.TotalSeconds;
             if (_shootTime<=0 && bullets.Count<15)
             {
-                bullets.Add(new Projectile(projectileTexture, this.getPos(), 20));
+                bullets.Add(new Projectile(projectileTexture, this.getPos(), 25));
                 _shootTime = _shootCooldown;
             }
         }

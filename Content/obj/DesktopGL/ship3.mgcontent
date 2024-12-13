@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/missile1.png</SourceFile>
-  <SourceTime>2024-12-11T20:28:02.0890195+01:00</SourceTime>
-  <DestFile>C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/bin/DesktopGL/missile1.xnb</DestFile>
-  <DestTime>2024-12-12T01:20:24.6145482+01:00</DestTime>
+  <SourceFile>C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/ship3.png</SourceFile>
+  <SourceTime>2024-12-11T20:26:55.3174717+01:00</SourceTime>
+  <DestFile>C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/bin/DesktopGL/ship3.xnb</DestFile>
+  <DestTime>2024-12-12T01:20:24.7664857+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2024-08-16T19:05:56+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
