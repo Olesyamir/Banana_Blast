@@ -1,5 +1,7 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/missile1.png","C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/bin/DesktopGL/missile1.xnb","TextureProcessor","Texture2DContent",38476,158425,0,114395
-"C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/ship1.png","C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/bin/DesktopGL/ship1.xnb","TextureProcessor","Texture2DContent",60527,158005,0,0102879
-"C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/ship2.png","C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/bin/DesktopGL/ship2.xnb","TextureProcessor","Texture2DContent",63615,175873,0,0074171
-"C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/virus1.png","C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/bin/DesktopGL/virus1.xnb","TextureProcessor","Texture2DContent",86138,138465,0,0234128
+"C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/missile1.png","C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/bin/DesktopGL/missile1.xnb","TextureProcessor","Texture2DContent",44933,158425,0,1383915
+"C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/outerspace.spritefont","C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/bin/DesktopGL/outerspace.xnb","FontDescriptionProcessor","SpriteFontContent",2073,37922,0,0877131
+"C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/ship1.png","C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/bin/DesktopGL/ship1.xnb","TextureProcessor","Texture2DContent",60527,158005,0,0121165
+"C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/ship2.png","C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/bin/DesktopGL/ship2.xnb","TextureProcessor","Texture2DContent",63615,175873,0,0097108
+"C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/ship3.png","C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/bin/DesktopGL/ship3.xnb","TextureProcessor","Texture2DContent",36319,785653,0,0365292
+"C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/virus1.png","C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/bin/DesktopGL/virus1.xnb","TextureProcessor","Texture2DContent",86138,138465,0,0069709
