@@ -7,17 +7,19 @@ namespace BasicMonoGame;
 
 public class MainMenuScreen : Screen
 {
-    private SpriteFont font;
-    private string[] menuItems = { "Start Game", "Options", "Exit" };
+    public SpriteFont font;
+    private string[] menuItems = { "Start Game", "Load", "Exit" };
     private int selectedIndex = 0;
     
     
-    private static float _pressTime =0f;
-    private static float _pressCooldown = 0.15f;
+    //private static float _pressTime =0f;
+    //private static float _pressCooldown = 0.15f;
 
     public override void Initialize()
     {
-        
+        Global.IsMenu = true;
+        Global.IsPaused = false;
+        Global.IsGame = false;
     }
     
     public override void LoadContent()
@@ -32,32 +34,40 @@ public class MainMenuScreen : Screen
         //Global._Content.Unload();
         //Global._game.Content.Unload();
     }
-    
+
     public override void Update(GameTime gameTime)
     {
-        // Gérer les entrées utilisateur
-        _pressTime += (float)gameTime.ElapsedGameTime.TotalSeconds;
-        if (_pressTime>=_pressCooldown)
+        if (Global.IsMenu)
         {
-            if (Keyboard.GetState().IsKeyDown(Keys.Up))
+            // Gérer les entrées utilisateur
+            Global._pressTime += (float)gameTime.ElapsedGameTime.TotalSeconds;
+            if (Global._pressTime >= Global._pressCooldown)
             {
-                selectedIndex = (selectedIndex - 1 + menuItems.Length) % menuItems.Length;
+                if (Keyboard.GetState().IsKeyDown(Keys.Up))
+                {
+                    selectedIndex = (selectedIndex - 1 + menuItems.Length) % menuItems.Length;
 
-                _pressTime = 0;
+                    Global._pressTime = 0;
+                }
+
+                if (Keyboard.GetState().IsKeyDown(Keys.Down))
+                {
+                    selectedIndex = (selectedIndex + 1) % menuItems.Length;
+                    Global._pressTime = 0;
+                }
+                
+                if (Keyboard.GetState().IsKeyDown(Keys.Enter))
+                {
+                    HandleMenuSelection(gameTime);
+                    Global._pressTime = 0;
+                }
+
             }
-            if (Keyboard.GetState().IsKeyDown(Keys.Down))
-            {
-                selectedIndex = (selectedIndex + 1) % menuItems.Length;
-                _pressTime = 0;
-            }
-            
+
+
+
+            base.Update(gameTime);
         }
-        
-        if (Keyboard.GetState().IsKeyDown(Keys.Enter))
-        {
-            HandleMenuSelection(gameTime);
-        }
-        base.Update(gameTime);
     }
 
     private void HandleMenuSelection(GameTime gameTime)
@@ -66,7 +76,8 @@ public class MainMenuScreen : Screen
         {
             case 0:
                 // Lancer le jeu
-                Global._ScreenManager.ChangeScreen(new InGameScreen());
+                Global._game.Content.Unload();
+                Global._ScreenManager.ChangeScreen(new InGameScreen(this));
                 break;
             case 1:
                 // Aller aux options
@@ -81,9 +92,8 @@ public class MainMenuScreen : Screen
     public override void Draw(GameTime gameTime)
     {
         
-        if (this is MainMenuScreen)
+        if (this is MainMenuScreen && Global.IsMenu)
         {
-            Console.WriteLine("dessin menu Appelé ");
             Global._game.GraphicsDevice.Clear(Color.CornflowerBlue);
             //Global._spriteBatch.Begin(samplerState : SamplerState.PointClamp);
             for (int i = 0; i < menuItems.Length; i++)
