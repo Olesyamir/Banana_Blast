@@ -11,10 +11,10 @@ public abstract class Screen
     public virtual void Draw(GameTime gameTime) { }
     public virtual void UnloadContent() { }
 
-    public void ChangeScreenSize(GraphicsDeviceManager graphics)
+    public void ChangeScreenSize(GraphicsDeviceManager graphics,int width,int height)
     {
-        graphics.PreferredBackBufferWidth = 500;
-        graphics.PreferredBackBufferHeight = 780;
+        graphics.PreferredBackBufferWidth = width;
+        graphics.PreferredBackBufferHeight = height;
         graphics.ApplyChanges();
     }
 }

@@ -17,7 +17,7 @@ public class Game1 : Game
     //private Creature _creature;//instance de creature
     public Game1()
     {
-        
+        Global.IsPaused = false;
         _graphics = new GraphicsDeviceManager(this);
         Global._graphics=_graphics;
         Content.RootDirectory = "Content";
