@@ -3,7 +3,9 @@ using Microsoft. Xna. Framework;
 using Microsoft. Xna. Framework. Graphics;
 using Microsoft. Xna. Framework. Input ;
 using Microsoft.Xna.Framework.Graphics;
-namespace BasicMonoGame;
+using jeu_monstre.Projectile;
+using jeu_monstre.Virus;
+namespace jeu_monstre.Player;
 
 public class Player : GameObject
 {
@@ -19,7 +21,7 @@ public class Player : GameObject
         }
     }
 
-    public void Update(GameTime gameTime,List<Projectile> bullets,Texture2D projectileTexture)
+    public void Update(GameTime gameTime,List<Projectile.Projectile> bullets,Texture2D projectileTexture)
     {
         if (Keyboard.GetState().IsKeyDown(Keys.Right))
         {
@@ -36,7 +38,7 @@ public class Player : GameObject
             _shootTime -= (float)gameTime.ElapsedGameTime.TotalSeconds;
             if (_shootTime<=0 && bullets.Count<15)
             {
-                bullets.Add(new Projectile(projectileTexture, this.getPos(), 20));
+                bullets.Add(new Projectile.Projectile(projectileTexture, this.getPos(), 20));
                 _shootTime = _shootCooldown;
             }
         }

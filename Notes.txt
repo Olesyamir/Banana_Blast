@@ -1,0 +1,7 @@
+HERITAGE DES CLASSES 
+Sprite <-- GameObject <-- Player, Projectile, Creature
+
+# Sprite ( texture, position, size) ; 
+# GameObject ( texture, position, size, _speed) ; 
+# Player ( texture, position, size, _speed, static _shootTime _shootCooldown);
+# Creature ( texture, position, size, _speed, _Health ) ; 

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/ship1.png</SourceFile>
-  <SourceTime>2024-11-25T10:27:32.8163503+01:00</SourceTime>
-  <DestFile>C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/bin/DesktopGL/Content/ship1.xnb</DestFile>
-  <DestTime>2024-11-25T10:34:16.2344854+01:00</DestTime>
+  <SourceFile>E:/UGA DOSSIER/LICENCE 3/FORMALISATION DES DONNEES, XML/TP/Projet Jeu Vidéo/jeu_mostre/Content/ship1.png</SourceFile>
+  <SourceTime>2024-12-05T14:06:03.1130479+01:00</SourceTime>
+  <DestFile>E:/UGA DOSSIER/LICENCE 3/FORMALISATION DES DONNEES, XML/TP/Projet Jeu Vidéo/jeu_mostre/Content/bin/DesktopGL/Content/ship1.xnb</DestFile>
+  <DestTime>2024-12-05T14:06:50.5246067+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2024-08-16T19:05:56+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

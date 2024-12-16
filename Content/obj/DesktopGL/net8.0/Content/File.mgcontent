@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SourceFile>E:/UGA DOSSIER/LICENCE 3/FORMALISATION DES DONNEES, XML/TP/Projet Jeu Vidéo/jeu_mostre/Content/File.spritefont</SourceFile>
+  <SourceTime>2024-12-16T01:29:21.3690584+01:00</SourceTime>
+  <DestFile>E:/UGA DOSSIER/LICENCE 3/FORMALISATION DES DONNEES, XML/TP/Projet Jeu Vidéo/jeu_mostre/Content/bin/DesktopGL/Content/File.xnb</DestFile>
+  <DestTime>2024-12-16T01:29:30.8088333+01:00</DestTime>
+  <Importer>FontDescriptionImporter</Importer>
+  <ImporterTime>2024-08-16T19:05:56+02:00</ImporterTime>
+  <Processor>FontDescriptionProcessor</Processor>
+  <ProcessorTime>2024-08-16T19:05:56+02:00</ProcessorTime>
+  <Parameters>
+    <Key>PremultiplyAlpha</Key>
+    <Value>True</Value>
+  </Parameters>
+  <Parameters>
+    <Key>TextureFormat</Key>
+    <Value>Compressed</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

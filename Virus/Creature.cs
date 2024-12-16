@@ -1,7 +1,7 @@
 using System;
 using Microsoft. Xna. Framework;
 using Microsoft. Xna. Framework. Graphics;
-namespace BasicMonoGame;
+namespace jeu_monstre.Virus;
 
 public class Creature : GameObject
 {
@@ -13,28 +13,29 @@ public class Creature : GameObject
         if (creature == TypeCreature.Petit)
         {
             _Health = 50;
-            this.setSpeedX(0.05f);
+            this.setSpeedX(0.03f);
         }
         if (creature == TypeCreature.Bigboss)
         {
             _Health = 100;
-            this.setSpeedX(0.04f);
+            this.setSpeedX(0.02f);
         }
         if (creature == TypeCreature.Moyen)
         {
             _Health = 65;
-            this.setSpeedX(0.05f);
+            this.setSpeedX(0.025f);
         }
 
         if (creature == TypeCreature.Boss)
         {
             _Health = 80;
-            this.setSpeedX(0.04f);
+            this.setSpeedX(0.02f);
             
         }
     }
 
-    public void Update(GameTime gameTime)
+    // faire bouger les virus //
+    public void Update(GameTime gameTime)   
     {
         _position.Y += 1+_speed.Y;
     }

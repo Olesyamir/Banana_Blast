@@ -1,4 +1,4 @@
-namespace BasicMonoGame;
+namespace jeu_monstre.Virus;
 
 public enum TypeCreature
 {

@@ -4,12 +4,16 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/missile1.png</File>
-    <File>C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/ship1.png</File>
-    <File>C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/ship2.png</File>
-    <File>C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/virus1.png</File>
+    <File>E:/UGA DOSSIER/LICENCE 3/FORMALISATION DES DONNEES, XML/TP/Projet Jeu Vidéo/jeu_mostre/Content/missile1.png</File>
+    <File>E:/UGA DOSSIER/LICENCE 3/FORMALISATION DES DONNEES, XML/TP/Projet Jeu Vidéo/jeu_mostre/Content/Roboto.spritefont</File>
+    <File>E:/UGA DOSSIER/LICENCE 3/FORMALISATION DES DONNEES, XML/TP/Projet Jeu Vidéo/jeu_mostre/Content/scoreboard01.png</File>
+    <File>E:/UGA DOSSIER/LICENCE 3/FORMALISATION DES DONNEES, XML/TP/Projet Jeu Vidéo/jeu_mostre/Content/ship1.png</File>
+    <File>E:/UGA DOSSIER/LICENCE 3/FORMALISATION DES DONNEES, XML/TP/Projet Jeu Vidéo/jeu_mostre/Content/ship2.png</File>
+    <File>E:/UGA DOSSIER/LICENCE 3/FORMALISATION DES DONNEES, XML/TP/Projet Jeu Vidéo/jeu_mostre/Content/virus1.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

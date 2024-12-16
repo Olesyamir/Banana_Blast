@@ -2,8 +2,9 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace BasicMonoGame;
+namespace jeu_monstre;
 
+// La classe Global gère les variables globales comme _Temps et _spriteBatch, _Content. Elles seront appelés dans Sprite
 public class Global
 {
     public static float _Temps { get; set; }

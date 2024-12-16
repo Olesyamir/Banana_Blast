@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace BasicMonoGame;
+namespace jeu_monstre.Virus;
 
 public static class CreatureManager
 {
