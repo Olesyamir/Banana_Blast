@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/Purple_Nebula.png</SourceFile>
-  <SourceTime>2019-12-31T15:28:18+01:00</SourceTime>
-  <DestFile>C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/bin/DesktopGL/Content/Purple_Nebula.xnb</DestFile>
-  <DestTime>2024-12-15T22:00:31.7250126+01:00</DestTime>
+  <SourceFile>C:/Users/Utilisateur/RiderProjects/jeu_mostre/Content/Purple_Nebula.png</SourceFile>
+  <SourceTime>2024-12-16T09:48:58.7221972+01:00</SourceTime>
+  <DestFile>C:/Users/Utilisateur/RiderProjects/jeu_mostre/Content/bin/DesktopGL/Content/Purple_Nebula.xnb</DestFile>
+  <DestTime>2024-12-16T09:49:29.5000362+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2024-08-16T19:05:56+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
