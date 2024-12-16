@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:init="http://www.univ-grenoble-alpes.fr/l3miage/jeu_video"
+           targetNamespace="http://www.univ-grenoble-alpes.fr/l3miage/jeu_video"
+           elementFormDefault="qualified">
+
+    <!-- Racine -->
+    <xs:element name="initialization" type="init:Initialization"/>
+
+    <!-- Type Initialization -->
+    <xs:complexType name="Initialization">
+        <xs:sequence>
+            <xs:element name="game" type="init:Game"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Type Game -->
+    <xs:complexType name="Game">
+        <xs:sequence>
+            <xs:element name="player" type="init:Player"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Type Player -->
+    <xs:complexType name="Player">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="date" type="xs:date"/>
+            <xs:element name="initialscore">
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

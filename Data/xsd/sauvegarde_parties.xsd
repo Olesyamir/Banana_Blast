@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:jv="http://www.univ-grenoble-alpes.fr/l3miage/jeu_video"
+           targetNamespace="http://www.univ-grenoble-alpes.fr/l3miage/jeu_video"
+           elementFormDefault="qualified">
+    
+    
+    <!--racine-->
+    <xs:element name="savedGames" type="jv:SavedGame"/>
+
+    <!-- Définition du type SavedGame -->
+    <xs:complexType name="SavedGame">
+        <xs:sequence>
+            <xs:element name="parties" type="jv:Parties"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Définition du type Parties -->
+    <xs:complexType name="Parties">
+        <xs:sequence>
+            <xs:element name="partie" type="jv:Partie" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <!-- Définition du type Partie -->
+    <xs:complexType name="Partie">
+        <xs:sequence>
+            <xs:element name="nomjoueur" type="xs:string"/>
+            <xs:element name="date" type="xs:date"/>
+            <xs:element name="score" type="xs:integer"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+</xs:schema>
+    
+            
+        
