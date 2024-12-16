@@ -13,12 +13,24 @@ public class Creature : GameObject
         if (creature == TypeCreature.Petit)
         {
             _Health = 50;
-            this.setSpeedX(0.02f);
+            this.setSpeedX(0.05f);
         }
         if (creature == TypeCreature.Bigboss)
         {
             _Health = 100;
+            this.setSpeedX(0.04f);
+        }
+        if (creature == TypeCreature.Moyen)
+        {
+            _Health = 65;
             this.setSpeedX(0.05f);
+        }
+
+        if (creature == TypeCreature.Boss)
+        {
+            _Health = 80;
+            this.setSpeedX(0.04f);
+            
         }
     }
 

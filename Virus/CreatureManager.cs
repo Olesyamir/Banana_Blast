@@ -8,7 +8,7 @@ namespace BasicMonoGame;
 
 public static class CreatureManager
 {
-    public static List<Creature> _Creatures { get; } = new List<Creature>();
+    public static List<Creature> _Creatures { get; } = new List<Creature>();   // liste des virus aléatoires
     private static Texture2D _texture;
     private static float _spawnCooldown;
     private static float _spawnTime;
