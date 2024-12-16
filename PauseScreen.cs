@@ -1,4 +1,4 @@
-using System.Net.Mime;
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft. Xna. Framework. Input ;
@@ -10,21 +10,19 @@ public class PauseScreen : Screen
 
     private string[] pauseItems = { "Resume", "Save", "Quit" };
     private int selectedIndex = 0;
-    //private float pressTime = 0f;
-    //private static float pressCooldown = 0.15f;
+
     private InGameScreen jeu;
-    private MainMenuScreen menu;
     private SpriteFont font;
-    public PauseScreen(InGameScreen jeu,MainMenuScreen menu)
+    public PauseScreen(InGameScreen jeu)
     {
         this.jeu = jeu;
-        this.menu = menu;
     }
     public override void Initialize()
     {
         Global.IsMenu = false;
         Global.IsPaused = true;
         Global.IsGame = false;
+        Global.IsGameOver = false;
     }
 
     public override void LoadContent()
@@ -65,19 +63,18 @@ public class PauseScreen : Screen
 
             }
 
-
+            CreatureManager.Update(gameTime);
         }
 
         base.Update(gameTime);
     }
 
-    public void HandlePauseSelection(GameTime gameTime)
+    private void HandlePauseSelection(GameTime gameTime)
     {
         switch (selectedIndex)
         {
             case 0:
                 Global._ScreenManager.ChangeScreen(jeu);
-               // Global.IsPaused = false;
                 break;
             case 1:
                 //Global._ScreenManager.ChangeScreen(new SaveScreen());
@@ -85,19 +82,18 @@ public class PauseScreen : Screen
             case 2:
                 
                 Global._game.Content.Unload();
-                Global._game.GraphicsDevice.Clear(Color.CornflowerBlue);
-               // Global.IsPaused = false;
                 Global._ScreenManager.ChangeScreen(new MainMenuScreen());
+                Global._game.GraphicsDevice.Clear(Color.CornflowerBlue);
                 ChangeScreenSize(Global._graphics,800,480);
                 break;
         }
     }
     public override void Draw(GameTime gameTime)
     {
-     Global._game.GraphicsDevice.Clear(Color.Black);
+     Global._game.GraphicsDevice.Clear(Color.CornflowerBlue);
      for (int i = 0; i < pauseItems.Length; i++)
      {
-         Color color = (i== selectedIndex) ? Color.Red : Color.White;
+         Color color = (i== selectedIndex) ? Color.Navy : Color.White;
          Global._spriteBatch.DrawString(font,pauseItems[i],new Vector2(100, 100 + i * 30), color);
      }
     }

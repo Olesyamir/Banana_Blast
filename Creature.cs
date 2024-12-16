@@ -6,20 +6,37 @@ namespace BasicMonoGame;
 public class Creature : GameObject
 {
 
-    public int _Health { get; set; }
+    private int _Health;
+    private int _damage;
     
     public Creature(TypeCreature creature, Texture2D texture, Vector2 position, int size) : base(texture, position, size)
     {
         if (creature == TypeCreature.Petit)
         {
             _Health = 50;
-            this.setSpeedX(0.02f);
+            _damage = 100;
+            this.setSpeedY(0.02f);
         }
         if (creature == TypeCreature.Bigboss)
         {
             _Health = 100;
-            this.setSpeedX(0.05f);
+            _damage = 35;
+            this.setSpeedY(0.05f);
         }
+    }
+
+    public int getDamage()//retourne les dommages causés par la créature
+    {
+        return _damage;
+    }
+
+    public int getHealth()
+    {
+        return _Health;
+    }
+    public void MonsterGotHit(int damage)
+    {
+        _Health -= damage;
     }
 
     public void Update(GameTime gameTime)

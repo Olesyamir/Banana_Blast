@@ -1,8 +1,6 @@
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft. Xna. Framework. Input ;
-using System;
 namespace BasicMonoGame;
 
 public class MainMenuScreen : Screen
@@ -11,15 +9,13 @@ public class MainMenuScreen : Screen
     private string[] menuItems = { "Start Game", "Load", "Exit" };
     private int selectedIndex = 0;
     
-    
-    //private static float _pressTime =0f;
-    //private static float _pressCooldown = 0.15f;
 
     public override void Initialize()
     {
         Global.IsMenu = true;
         Global.IsPaused = false;
         Global.IsGame = false;
+        Global.IsGameOver = false;
     }
     
     public override void LoadContent()
@@ -77,7 +73,7 @@ public class MainMenuScreen : Screen
             case 0:
                 // Lancer le jeu
                 Global._game.Content.Unload();
-                Global._ScreenManager.ChangeScreen(new InGameScreen(this));
+                Global._ScreenManager.ChangeScreen(new InGameScreen());
                 break;
             case 1:
                 // Aller aux options

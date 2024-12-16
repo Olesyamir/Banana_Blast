@@ -7,8 +7,7 @@ namespace BasicMonoGame;
 
 public class Player : GameObject
 {
-    private static float _shootTime;
-    private static float _shootCooldown = 0.15f;
+    private int _health = 100;
     
     private int sizeMax = 100;
     public Player(Texture2D texture, Vector2 position, int size) : base(texture, position, size)
@@ -31,16 +30,17 @@ public class Player : GameObject
             _speed.X -= 0.5f;
         }
 
-        if (Keyboard.GetState().IsKeyDown(Keys.X))
-        {
-            _shootTime -= (float)gameTime.ElapsedGameTime.TotalSeconds;
-            if (_shootTime<=0 && bullets.Count<15)
-            {
-                bullets.Add(new Projectile(projectileTexture, this.getPos(), 25));
-                _shootTime = _shootCooldown;
-            }
-        }
         
+        Global._pressTime += (float)gameTime.ElapsedGameTime.TotalSeconds;
+        if (Global._pressTime >= Global._pressCooldown)
+        {
+            if (bullets.Count < 15)
+                if (Keyboard.GetState().IsKeyDown(Keys.X))
+                {
+                    bullets.Add(new Projectile(projectileTexture, this.getPos(), 25));
+                    Global._pressTime = 0;
+                }
+        }
 
         _position.X = _position.X + _speed.X;
         _position.Y = _position.Y + _speed.Y;
@@ -48,8 +48,15 @@ public class Player : GameObject
         if (_speed.X < 0) _speed.X += 0.1f;
         if (_speed.Y > 0) _speed.Y -= 0.1f;
         if (_speed.Y < 0) _speed.Y += 0.1f;
-        
+        if (_health == 0)
+        {
+            Global._ScreenManager.ChangeScreen(new GameOverScreen());
+        }
+    }
 
+    public void playerGotHit(int damage)
+    {
+            _health -= damage;
     }
     
 

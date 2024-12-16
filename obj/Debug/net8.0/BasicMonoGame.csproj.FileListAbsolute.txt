@@ -29,3 +29,6 @@ C:\Users\jon4t\RiderProjects\BasicMonoGame\bin\Debug\net8.0\Content\virus1.xnb
 C:\Users\jon4t\RiderProjects\BasicMonoGame\bin\Debug\net8.0\Content\missile1.xnb
 C:\Users\jon4t\RiderProjects\BasicMonoGame\bin\Debug\net8.0\Content\ship3.xnb
 C:\Users\jon4t\RiderProjects\BasicMonoGame\bin\Debug\net8.0\Content\outerspace.xnb
+C:\Users\jon4t\RiderProjects\BasicMonoGame\bin\Debug\net8.0\Content\rb_11922.xnb
+C:\Users\jon4t\RiderProjects\BasicMonoGame\bin\Debug\net8.0\Content\cosmofighter.xnb
+C:\Users\jon4t\RiderProjects\BasicMonoGame\bin\Debug\net8.0\Content\Purple_Nebula.xnb
