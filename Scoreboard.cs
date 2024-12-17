@@ -1,4 +1,5 @@
 using System.Net.Mime;
+using System.Runtime.CompilerServices;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -8,33 +9,42 @@ using Microsoft.Xna.Framework.Content;
 
 namespace jeu_monstre;
 
-public class Scoreboard: GameObject
+public static class Scoreboard
 {
-    private int score;   // point actuel
-    private SpriteFont font;
-    
-    public Scoreboard(Texture2D texture, Vector2 position, int size) : base(texture, position, size)
+    private static Vector2 position;
+    private static int score = 0;   // point actuel, init = 0 
+    private static SpriteFont font;
+
+    public static void Init()
     {
-        score = 0;
+        position = new Vector2(0, 0);
+        //score = 0;
+        font = Global._Content.Load<SpriteFont>("Roboto");
     }
 
-    public void addScore(int score)
-    {
-        this.score += score;
+    public static void addScore(int tmp)
+    { 
+        score += tmp;
     }
     
-    public int getScore() => score;
-    public void resetScore() => score = 0;
-
-    public void LoadContent(ContentManager content, string fontpath)
-    {
-        font = content.Load<SpriteFont>(fontpath);
-    } 
+    public static void resetScore() => score = 0;
     
-    public void Draw(SpriteBatch spriteBatch)
+    
+    public static void Draw(SpriteBatch spriteBatch)
     {
         string scoreText = $"Score : {score}";
-        spriteBatch.DrawString(font, scoreText, _position, Color.GhostWhite);
+        spriteBatch.DrawString(font, scoreText, position, Color.GhostWhite);
     }
-    
+
+    public static void Update(GameTime gameTime)
+    {
+        if (Global.IsMenu || Global.IsGameOver)
+        {
+            resetScore();
+        }
+        else
+        {
+            
+        }
+    }
 }

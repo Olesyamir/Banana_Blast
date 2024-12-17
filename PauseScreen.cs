@@ -62,8 +62,10 @@ public class PauseScreen : Screen
                 }
 
             }
-
+            
             CreatureManager.Update(gameTime);
+            Scoreboard.Update(gameTime);
+            
         }
 
         base.Update(gameTime);

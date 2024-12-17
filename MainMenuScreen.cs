@@ -16,6 +16,7 @@ public class MainMenuScreen : Screen
         Global.IsPaused = false;
         Global.IsGame = false;
         Global.IsGameOver = false;
+        //Scoreboard.Init();  // initialiser le scoreboard dès le lancement du jeu
     }
     
     public override void LoadContent()
