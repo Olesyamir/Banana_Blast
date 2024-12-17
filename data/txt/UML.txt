@@ -1,0 +1,160 @@
+﻿@startuml
+class Sprite {
+ -_texture: Texture2D
+ #_position: Vector2
+ -_size=100
+ __sizeMin_ = 10
+ -_color: White
+
+}
+
+class GameObject {
+ #_speed: Vector2 
+}
+
+class Player {
+ -_health = 100
+ -_sizeMax = 100
+}
+
+class Creature {
+ -_Health 
+ -_damage
+}
+
+class CreatureManager <<static>>{
+ +_Creatures: List<Creature> 
+ -_texture <<static>>: Texture2D
+ -_spawnCooldown <<static>>: float
+ -_spawnTime <<static>>: float
+ -_padding <<static>>: int
+}
+
+enum TypeCreature {
+ Moyen
+ Boss
+ Bigboss
+ Petit
+}
+
+class Projectile {
+ -_degats_ = 10
+}
+
+class Scoreboard <<static>> {
+ -position <<static>>: Vector2
+ -score <<static>>: int
+ -font <<static>>: SpriteFont 
+}
+
+class Explosion {
+ +_animation: ExplosionAnimation
+}
+
+class ExplosionAnimation {
+ -_texture: Texture2D
+ -_explosions: List<Rectangle>
+ -_frames: int
+ -_frame: int
+ -_frameTime: float
+ -_frameTimeLeft: float
+ +_active = true
+}
+
+class Background 
+
+class BackgroundManager {
+ -Backgrounds <<static>>: List<Background>
+ -bgTexture: Texture2D
+ -bgsize = 1560;
+}
+
+class Screen 
+
+class ScreenManager {
+ -_currentScreen: Screen
+}
+
+class MainMenuScreen {
+ +SpriteFont: font
+ -menuItems: string[]
+ -selectedIndex = 0
+}
+
+class InGameScreen {
+ -_graphics: GraphicsDeviceManager
+ -_ship: Player
+ -_background: BackgroundManager 
+ -exploTexture: Texture2D
+ -_projectiles: List<Projectile>
+ -_killprojectils: List<Projectile>
+ -explosions: List<Explosion>
+ -Instance <<static>> : InGameScreen
+}
+ 
+
+class GameOverScreen {
+ -GameOverItems: string[]
+ -selectedIndex = 0
+ -font: SpriteFont
+}
+
+class PauseScreen {
+ -pauseItems: string[]
+ -selectedIndex = 0
+ -jeu: InGameScreen
+ -font: SpriteFont
+}
+
+class Global 
+
+class Game1
+
+Sprite <|-- GameObject 
+
+GameObject <|-- Player
+
+GameObject <|-- Creature
+
+GameObject <|-- Projectile
+
+GameObject <|-- Background  
+
+GameObject <|-- Explosion
+
+CreatureManager *-- Creature
+
+Explosion *-- ExplosionAnimation 
+
+BackgroundManager *-- Background
+
+Creature *-- TypeCreature
+
+ScreenManager *-- Screen
+
+Screen <|-- MainMenuScreen
+
+Screen <|-- InGameScreen
+
+Screen <|-- PauseScreen
+
+Screen <|-- GameOverScreen
+
+InGameScreen *-- Projectile
+
+InGameScreen *-- BackgroundManager
+
+InGameScreen *-- Player
+
+InGameScreen *-- Explosion
+
+InGameScreen o-- Scoreboard
+
+InGameScreen o-- CreatureManager
+
+Global *-- Screen
+
+Global *-- ScreenManager
+
+Game1 *-- Global
+@enduml

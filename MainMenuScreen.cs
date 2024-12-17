@@ -62,7 +62,7 @@ public class MainMenuScreen : Screen
             }
 
 
-
+            Scoreboard.Update(gameTime);
             base.Update(gameTime);
         }
     }

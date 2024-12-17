@@ -11,8 +11,8 @@ public class InGameScreen : Screen
     private Player _ship;//instance de Player
     private BackgroundManager _background;
     private Texture2D exploTexture;
-    List<Projectile> _projectiles;
-    List<Projectile> _killprojectiles;
+    private List<Projectile> _projectiles;
+    private List<Projectile> _killprojectiles;
     private List<Explosion> explosions;
     private static InGameScreen Instance;
 

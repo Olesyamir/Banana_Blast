@@ -58,7 +58,7 @@ public class GameOverScreen : Screen
             }
 
 
-
+            Scoreboard.Update(gameTime);
             base.Update(gameTime);
         }
     }

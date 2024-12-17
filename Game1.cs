@@ -27,7 +27,8 @@ public class Game1 : Game
 
     protected override void Initialize()
     {
-        Global._game = this;
+        Global.
+            _game = this;
         Global._GameScreen = new MainMenuScreen();
         Global._ScreenManager= new ScreenManager();
         Global._Content = Content;
