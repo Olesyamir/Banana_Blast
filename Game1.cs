@@ -1,9 +1,5 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
 
 namespace BasicMonoGame;
 
@@ -11,18 +7,14 @@ public class Game1 : Game
 {
     public GraphicsDeviceManager _graphics;
     
-    public static Game1 Instance;
-    
     
     //private Creature _creature;//instance de creature
     public Game1()
     {
-        Global.IsPaused = false;
         _graphics = new GraphicsDeviceManager(this);
         Global._graphics=_graphics;
         Content.RootDirectory = "Content";
         IsMouseVisible = true;
-        Instance = this;
     }
 
     protected override void Initialize()
@@ -54,7 +46,7 @@ public class Game1 : Game
     {
         GraphicsDevice.Clear(Color.CornflowerBlue);
 
-        //drawing code here
+        //drawing code
         Global._spriteBatch.Begin(samplerState : SamplerState.PointClamp);
         Global._ScreenManager.Draw(gameTime);
         Global._spriteBatch.End();

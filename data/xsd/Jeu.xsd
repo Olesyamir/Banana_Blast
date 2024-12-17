@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:jm="http://www.univ-grenoble-alpes.fr/jeu_monstres"
+           elementFormDefault="qualified"
+           targetNamespace="http://www.univ-grenoble-alpes.fr/jeu_monstres">
+
+    <!--racine-->
+    <xs:element name="jeu" type="jm:Jeu"/>
+
+    <xs:complexType name="Jeu">
+        <xs:sequence>
+            <xs:element name="joueur" type="jm:Joueur"/>
+            <xs:element name="monstres" type="jm:Monstres"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Monstres">
+        <xs:sequence>
+            <xs:element name="monstres" type="jm:Monstre" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Monstre">
+        <xs:sequence>
+            <xs:element name="vitesse" type="xs:double"/>
+            <xs:element name="vie" type="xs:double"/>
+            <xs:element name="taille" type="xs:double"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Joueur">
+        <xs:sequence>
+            <xs:element name="nom" type="xs:string"/>
+            <xs:element name="age" type="xs:string"/>
+            <xs:element name="health" type="xs:string"/>
+            <xs:element name="position" type="jm:Position" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="score" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Position">
+        <xs:sequence>
+            <xs:element name="x" type="xs:int"/>
+            <xs:element name="y" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

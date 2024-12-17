@@ -5,36 +5,33 @@ namespace BasicMonoGame;
 
 public class MainMenuScreen : Screen
 {
-    public SpriteFont font;
-    private string[] menuItems = { "Start Game", "Load", "Exit" };
+    private SpriteFont font;
+    private string[] menuItems = { "Start Game", "Load", "Exit" };//liste des choix possibles
     private int selectedIndex = 0;
     
 
     public override void Initialize()
     {
-        Global.IsMenu = true;
-        Global.IsPaused = false;
-        Global.IsGame = false;
-        Global.IsGameOver = false;
+        Global._screenState = ScreenState.IsMenu;
     }
     
     public override void LoadContent()
     {
-        // Charger la police et autres ressources nécessaires
+        // Charger la police
         font = Global._Content.Load<SpriteFont>("outerspace");
     }
 
     public override void UnloadContent()
     {
-        //font = null;
-        //Global._Content.Unload();
-        //Global._game.Content.Unload();
+        //si besoin
     }
 
     public override void Update(GameTime gameTime)
     {
-        if (Global.IsMenu)
+        Scoreboard.Update(gameTime);
+        if (Global._screenState== ScreenState.IsMenu)
         {
+            
             // Gérer les entrées utilisateur
             Global._pressTime += (float)gameTime.ElapsedGameTime.TotalSeconds;
             if (Global._pressTime >= Global._pressCooldown)
@@ -73,10 +70,13 @@ public class MainMenuScreen : Screen
             case 0:
                 // Lancer le jeu
                 Global._game.Content.Unload();
-                Global._ScreenManager.ChangeScreen(new InGameScreen());
+                Global._ScreenManager.ChangeScreen(new InitializeScreen());
                 break;
             case 1:
-                // Aller aux options
+                // Load
+                XMLManager<InGameScreen> GameSerializer = new XMLManager<InGameScreen>();
+                var jeu = GameSerializer.Load("Sauvegarde.xml");
+                Global._ScreenManager.ChangeScreen(jeu);
                 break;
             case 2:
                 // Quitter le jeu
@@ -88,16 +88,15 @@ public class MainMenuScreen : Screen
     public override void Draw(GameTime gameTime)
     {
         
-        if (this is MainMenuScreen && Global.IsMenu)
+        if (Global._screenState==ScreenState.IsMenu)
         {
             Global._game.GraphicsDevice.Clear(Color.CornflowerBlue);
-            //Global._spriteBatch.Begin(samplerState : SamplerState.PointClamp);
             for (int i = 0; i < menuItems.Length; i++)
             {
-                Color color = (i == selectedIndex) ? Color.Navy : Color.White;
+                Color color = (i == selectedIndex) ? Color.Navy : Color.White;//change couleur si selectionne
                 Global._spriteBatch.DrawString(font, menuItems[i], new Vector2(100, 100 + i * 30), color);
+                //Dessine chaque choix possibles 
             }
-            //Global._spriteBatch.End();
         }
         base.Draw(gameTime);
     }

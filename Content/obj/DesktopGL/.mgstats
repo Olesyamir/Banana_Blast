@@ -1,2 +1,12 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/Purple_Nebula.png","C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/bin/DesktopGL/Purple_Nebula.xnb","TextureProcessor","Texture2DContent",1146371,4194389,0,3460397
+"C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/Boxybold.spritefont","C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/bin/DesktopGL/Boxybold.xnb","FontDescriptionProcessor","SpriteFontContent",2071,37922,0,2191479
+"C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/cosmofighter.png","C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/bin/DesktopGL/cosmofighter.xnb","TextureProcessor","Texture2DContent",36983,318829,0,0312412
+"C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/enemy2.png","C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/bin/DesktopGL/enemy2.xnb","TextureProcessor","Texture2DContent",728656,3355213,0,1278454
+"C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/missile1.png","C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/bin/DesktopGL/missile1.xnb","TextureProcessor","Texture2DContent",1045,16469,0,0020066
+"C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/outerspace.spritefont","C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/bin/DesktopGL/outerspace.xnb","FontDescriptionProcessor","SpriteFontContent",2073,37922,0,0152133
+"C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/Purple_Nebula.png","C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/bin/DesktopGL/Purple_Nebula.xnb","TextureProcessor","Texture2DContent",1146371,4194389,0,1741841
+"C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/rb_11922.png","C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/bin/DesktopGL/rb_11922.xnb","TextureProcessor","Texture2DContent",628437,6797653,0,2941903
+"C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/ship1.png","C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/bin/DesktopGL/ship1.xnb","TextureProcessor","Texture2DContent",60527,158005,0,0088126
+"C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/ship2.png","C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/bin/DesktopGL/ship2.xnb","TextureProcessor","Texture2DContent",3101,25685,0,0042617
+"C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/ship3.png","C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/bin/DesktopGL/ship3.xnb","TextureProcessor","Texture2DContent",36319,785653,0,0295691
+"C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/virus1.png","C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/bin/DesktopGL/virus1.xnb","TextureProcessor","Texture2DContent",86138,138465,0,0091393
