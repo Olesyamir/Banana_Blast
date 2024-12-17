@@ -8,11 +8,12 @@ public class Projectile : GameObject
 {
     public Projectile(Texture2D texture, Vector2 position, int size) : base(texture, position, size)
     {
+        this.setSpeedY(4f);
     }
     
     public void Update(GameTime gameTime)
     {
-        this.setSpeedY(0.2f);
-        _position.Y -= 1+_speed.Y;
+        
+        _position.Y -= (1+_speed.Y);
     }
 }

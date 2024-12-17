@@ -1,4 +1,4 @@
-using System.Net.Mime;
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft. Xna. Framework. Input ;
@@ -7,24 +7,19 @@ namespace BasicMonoGame;
 
 public class PauseScreen : Screen
 {
-
+    //liste des choix possibles dans l'ecrans de pause
     private string[] pauseItems = { "Resume", "Save", "Quit" };
     private int selectedIndex = 0;
-    //private float pressTime = 0f;
-    //private static float pressCooldown = 0.15f;
+
     private InGameScreen jeu;
-    private MainMenuScreen menu;
     private SpriteFont font;
-    public PauseScreen(InGameScreen jeu,MainMenuScreen menu)
+    public PauseScreen(InGameScreen jeu)
     {
         this.jeu = jeu;
-        this.menu = menu;
     }
     public override void Initialize()
     {
-        Global.IsMenu = false;
-        Global.IsPaused = true;
-        Global.IsGame = false;
+        Global._screenState = ScreenState.IsPaused;
     }
 
     public override void LoadContent()
@@ -40,7 +35,7 @@ public class PauseScreen : Screen
     public override void Update(GameTime gameTime)
     {
         // Gérer les entrées utilisateur
-        if (Global.IsPaused)
+        if (Global._screenState==ScreenState.IsPaused)
         {
             Global._pressTime += (float)gameTime.ElapsedGameTime.TotalSeconds;
             if (Global._pressTime >= Global._pressCooldown)
@@ -65,39 +60,41 @@ public class PauseScreen : Screen
 
             }
 
-
+            MonstreManager.Update(gameTime);
         }
 
         base.Update(gameTime);
     }
 
-    public void HandlePauseSelection(GameTime gameTime)
+    private void HandlePauseSelection(GameTime gameTime)
     {
         switch (selectedIndex)
         {
             case 0:
                 Global._ScreenManager.ChangeScreen(jeu);
-               // Global.IsPaused = false;
                 break;
             case 1:
-                //Global._ScreenManager.ChangeScreen(new SaveScreen());
+                //Sauvegarde de la partie et mise à jour des stats du joueurs
+                XMLManager<InGameScreen> GameDeserializer = new XMLManager<InGameScreen>();
+                GameDeserializer.Save("C:\\Users\\jon4t\\RiderProjects\\BasicMonoGame\\data\\xml\\Sauvegarde.xml",jeu);
                 break;
             case 2:
-                
                 Global._game.Content.Unload();
-                Global._game.GraphicsDevice.Clear(Color.CornflowerBlue);
-               // Global.IsPaused = false;
                 Global._ScreenManager.ChangeScreen(new MainMenuScreen());
+                //Clear l'ecran de tout les objets
+                Global._game.GraphicsDevice.Clear(Color.CornflowerBlue);
+                //remet l'ecran a la taille par defaut
                 ChangeScreenSize(Global._graphics,800,480);
                 break;
         }
     }
     public override void Draw(GameTime gameTime)
     {
-     Global._game.GraphicsDevice.Clear(Color.Black);
+     Global._game.GraphicsDevice.Clear(Color.CornflowerBlue);
+     //affiche les choix
      for (int i = 0; i < pauseItems.Length; i++)
      {
-         Color color = (i== selectedIndex) ? Color.Red : Color.White;
+         Color color = (i== selectedIndex) ? Color.Navy : Color.White;//si selectionné alors change couleur
          Global._spriteBatch.DrawString(font,pauseItems[i],new Vector2(100, 100 + i * 30), color);
      }
     }
