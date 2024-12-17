@@ -1,4 +1,4 @@
-namespace jeu_monstre.Virus;
+namespace jeu_monstre;
 
 public enum TypeCreature
 {

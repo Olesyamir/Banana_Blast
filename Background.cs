@@ -1,7 +1,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace BasicMonoGame;
+namespace jeu_monstre;
 
 public class Background :GameObject
 {

@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-namespace BasicMonoGame;
+namespace jeu_monstre;
 
 public class InGameScreen : Screen
 {
@@ -15,7 +15,7 @@ public class InGameScreen : Screen
     List<Projectile> _killprojectiles;
     private List<Explosion> explosions;
     private static InGameScreen Instance;
-
+    private Scoreboard _scoreboard; 
 
     public InGameScreen()
     {
@@ -40,12 +40,15 @@ public class InGameScreen : Screen
     {
         Texture2D shipTexture = Global._game.Content.Load < Texture2D >("ship2") ;
         Texture2D bgTexture = Global._game.Content.Load<Texture2D>("Purple_Nebula");
+        Texture2D scoreboardTexture = Global._game.Content.Load<Texture2D>("Scoreboard01");
         _background.Initialize(bgTexture); 
         exploTexture = Global._game.Content.Load<Texture2D>("rb_11922");
         _ship = new Player( shipTexture , new Vector2 (250 , 720),100 ) ;
         _projectiles = new List<Projectile>();
         _killprojectiles = new List<Projectile>();
         explosions = new List<Explosion>();
+        _scoreboard = new Scoreboard(scoreboardTexture, new Vector2(0 , 0), 60);
+        _scoreboard.LoadContent(Global._Content, "Roboto");
     }
 
     public override void UnloadContent()
@@ -130,7 +133,8 @@ public override void Update(GameTime gameTime)
                         var lo= p.getPos().Y;
                         
                         explosions.Add(new Explosion(exploTexture, new Vector2(la- (p._Rect.Width*1.5f),lo- (p._Rect.Height*3f)),60));
-                        _killprojectiles.Add(p);
+                        _killprojectiles.Add(p);   // modifier le score après avoir tué un virus
+                        _scoreboard.addScore(1);
                         s.MonsterGotHit(50);
                     }
 
@@ -172,6 +176,7 @@ public override void Update(GameTime gameTime)
                 _background.Draw(gameTime);
                 _ship.Draw(Global._spriteBatch);
                 CreatureManager.Draw();
+                _scoreboard.Draw(Global._spriteBatch);
                 foreach (var p in _projectiles)
                 {
                     p.Draw(Global._spriteBatch);

@@ -31,3 +31,8 @@ E:\UGA DOSSIER\LICENCE 3\FORMALISATION DES DONNEES, XML\TP\Projet Jeu Vidéo\jeu
 E:\UGA DOSSIER\LICENCE 3\FORMALISATION DES DONNEES, XML\TP\Projet Jeu Vidéo\jeu_mostre\bin\Debug\net8.0\Content\scoreboard01.xnb
 E:\UGA DOSSIER\LICENCE 3\FORMALISATION DES DONNEES, XML\TP\Projet Jeu Vidéo\jeu_mostre\bin\Debug\net8.0\Content\File.xnb
 E:\UGA DOSSIER\LICENCE 3\FORMALISATION DES DONNEES, XML\TP\Projet Jeu Vidéo\jeu_mostre\bin\Debug\net8.0\Content\Roboto.xnb
+E:\UGA DOSSIER\LICENCE 3\FORMALISATION DES DONNEES, XML\TP\Projet Jeu Vidéo\jeu_mostre\bin\Debug\net8.0\Content\cosmofighter.xnb
+E:\UGA DOSSIER\LICENCE 3\FORMALISATION DES DONNEES, XML\TP\Projet Jeu Vidéo\jeu_mostre\bin\Debug\net8.0\Content\outerspace.xnb
+E:\UGA DOSSIER\LICENCE 3\FORMALISATION DES DONNEES, XML\TP\Projet Jeu Vidéo\jeu_mostre\bin\Debug\net8.0\Content\Purple_Nebula.xnb
+E:\UGA DOSSIER\LICENCE 3\FORMALISATION DES DONNEES, XML\TP\Projet Jeu Vidéo\jeu_mostre\bin\Debug\net8.0\Content\rb_11922.xnb
+E:\UGA DOSSIER\LICENCE 3\FORMALISATION DES DONNEES, XML\TP\Projet Jeu Vidéo\jeu_mostre\bin\Debug\net8.0\Content\ship3.xnb

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace jeu_monstre.Virus;
+namespace jeu_monstre;
 
 public static class CreatureManager
 {

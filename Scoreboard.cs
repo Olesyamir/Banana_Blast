@@ -6,7 +6,7 @@ using jeu_monstre;
 using Microsoft.Xna.Framework.Content;
 
 
-namespace jeu_monstre.Scoreboard;
+namespace jeu_monstre;
 
 public class Scoreboard: GameObject
 {
@@ -33,8 +33,8 @@ public class Scoreboard: GameObject
     
     public void Draw(SpriteBatch spriteBatch)
     {
-        string scoreText = $"{score}";
-        spriteBatch.DrawString(font, scoreText, _position, Color.Red);
+        string scoreText = $"Score : {score}";
+        spriteBatch.DrawString(font, scoreText, _position, Color.GhostWhite);
     }
     
 }

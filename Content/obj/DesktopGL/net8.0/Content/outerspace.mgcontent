@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/outerspace.spritefont</SourceFile>
-  <SourceTime>2024-12-12T01:20:18.5096772+01:00</SourceTime>
-  <DestFile>C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/bin/DesktopGL/Content/outerspace.xnb</DestFile>
-  <DestTime>2024-12-12T01:20:51.9649943+01:00</DestTime>
+  <SourceFile>E:/UGA DOSSIER/LICENCE 3/FORMALISATION DES DONNEES, XML/TP/Projet Jeu Vidéo/jeu_mostre/Content/outerspace.spritefont</SourceFile>
+  <SourceTime>2024-12-16T13:48:00.717134+01:00</SourceTime>
+  <DestFile>E:/UGA DOSSIER/LICENCE 3/FORMALISATION DES DONNEES, XML/TP/Projet Jeu Vidéo/jeu_mostre/Content/bin/DesktopGL/Content/outerspace.xnb</DestFile>
+  <DestTime>2024-12-16T13:54:51.196507+01:00</DestTime>
   <Importer>FontDescriptionImporter</Importer>
   <ImporterTime>2024-08-16T19:05:56+02:00</ImporterTime>
   <Processor>FontDescriptionProcessor</Processor>

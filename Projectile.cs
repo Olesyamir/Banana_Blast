@@ -2,7 +2,7 @@ using System;
 using Microsoft. Xna. Framework;
 using Microsoft. Xna. Framework. Graphics;
 
-namespace jeu_monstre.Projectile;
+namespace jeu_monstre;
 
 public class Projectile : GameObject
 {

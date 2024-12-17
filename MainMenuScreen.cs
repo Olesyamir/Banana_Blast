@@ -1,12 +1,12 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft. Xna. Framework. Input ;
-namespace BasicMonoGame;
+namespace jeu_monstre;
 
 public class MainMenuScreen : Screen
 {
     public SpriteFont font;
-    private string[] menuItems = { "Start Game", "Load", "Exit" };
+    private string[] menuItems = { "Start Game", "Load", "Guide", "Exit" };
     private int selectedIndex = 0;
     
 
