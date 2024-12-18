@@ -8,11 +8,10 @@ public class Global
 {
     public static float _Temps { get; set; }
     
-    public static bool IsPaused { get; set; }
-    public static bool IsGame { get; set; }
-    public static bool IsMenu { get; set; }
-    
-    public static bool IsGameOver { get; set; }
+    public static Joueur _joueur { get; set; }
+
+    public static bool IsLoad { get; set; } = false;
+    public static ScreenState _screenState { get; set; }
     
     public static SpriteBatch _spriteBatch;
     public static ContentManager _Content { get; set; }
@@ -28,5 +27,5 @@ public class Global
     }
 
     public static float _pressTime { get; set; }
-    public static float _pressCooldown = 0.40f;
-} 
+    public static float _pressCooldown = 0.3f;
+}

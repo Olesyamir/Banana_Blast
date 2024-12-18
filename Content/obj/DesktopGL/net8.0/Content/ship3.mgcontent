@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <SourceFile>C:/Users/Utilisateur/RiderProjects/jeu_mostre/Content/ship3.png</SourceFile>
-  <SourceTime>2024-12-16T09:48:58.8490659+01:00</SourceTime>
+  <SourceTime>2024-12-18T13:37:29.8821048+01:00</SourceTime>
   <DestFile>C:/Users/Utilisateur/RiderProjects/jeu_mostre/Content/bin/DesktopGL/Content/ship3.xnb</DestFile>
-  <DestTime>2024-12-16T09:49:29.7676483+01:00</DestTime>
+  <DestTime>2024-12-18T14:43:47.9871935+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2024-08-16T19:05:56+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

@@ -19,8 +19,8 @@ public class GameObject : Sprite
     
     public void setPos(float x, float y)
     {
-        this._position.X = x;
-        this._position.Y = y;
+        _position.X = x;
+        _position.Y = y;
     }
     
     public void setSpeedX(float x)

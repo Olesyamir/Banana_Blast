@@ -12,21 +12,21 @@ namespace XMLValidation
             
             AppContext.SetSwitch("Switch.System.Xml.AllowDefaultResolver", true);
             XMLUtils.ValidateXmlFileAsync(
-                "http://www.univ-grenoble-alpes.fr/l3miage/jeu_video", "../../../../Data/xsd/initialization.xsd",
-                "../../../../Data/xml/initialization.xml").Wait();
+                "http://www.univ-grenoble-alpes.fr/l3miage/jeu_video", "../../../../data/xsd/initialization.xsd",
+                "../../../../data/xml/initialization.xml").Wait();
 
             XMLUtils.ValidateXmlFileAsync(
-                "http://www.univ-grenoble-alpes.fr/l3miage/profile", "../../../../Data/xsd/profile.xsd",
-                "../../../../Data/xml/profile.xml").Wait();
+                "http://www.univ-grenoble-alpes.fr/l3miage/profile", "../../../../data/xsd/profile.xsd",
+                "../../../../data/xml/profile.xml").Wait();
 
             XMLUtils.ValidateXmlFileAsync(
-                "http://www.univ-grenoble-alpes.fr/l3miage/jeu_video", "../../../../Data/xsd/savedGames.xsd",
-                "../../../../Data/xml/savedGames.xml").Wait();
+                "http://www.univ-grenoble-alpes.fr/l3miage/jeu_video", "../../../../data/xsd/savedGames.xsd",
+                "../../../../data/xml/savedGames.xml").Wait();
             
             // execution des fichiers  XSLT
-        XMLUtils.XslTransform("../../../../Data/xml/savedGames.xml", "../../../../Data/xslt/scores.xslt", "../../../../Data/html/scores.html");
-        XMLUtils.XslTransform("../../../../Data/xml/savedGames.xml", "../../../../Data/xslt/scores.xslt", "../../../../Data/html/scores.html");
-        XMLUtils.XslTransform("../../../../Data/xml/Games.xml", "../../../../Data/xslt/parties.xslt", "../../../../Data/xml/Parties.xml");
+        XMLUtils.XslTransform("../../../../data/xml/savedGames.xml", "../../../../data/xslt/scores.xslt", "../../../../data/html/scores.html");
+        XMLUtils.XslTransform("../../../../data/xml/savedGames.xml", "../../../../data/xslt/scores.xslt", "../../../../data/html/scores.html");
+        XMLUtils.XslTransform("../../../../data/xml/Games.xml", "../../../../data/xslt/parties.xslt", "../../../../data/xml/Parties.xml");
         }
     }
 }

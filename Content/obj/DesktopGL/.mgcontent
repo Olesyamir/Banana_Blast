@@ -4,7 +4,9 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
+    <File>C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/Boxybold.spritefont</File>
     <File>C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/cosmofighter.png</File>
+    <File>C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/enemy2.png</File>
     <File>C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/missile1.png</File>
     <File>C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/outerspace.spritefont</File>
     <File>C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/Purple_Nebula.png</File>
@@ -15,6 +17,8 @@
     <File>C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/virus1.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

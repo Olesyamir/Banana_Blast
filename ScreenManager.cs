@@ -19,11 +19,11 @@ public class ScreenManager
     {
         _currentScreen = newScreen;
         _currentScreen?.Initialize();
-        _currentScreen?.LoadContent();
+        LoadContent();
         
     }
 
-    public void LoadContent()
+    private void LoadContent()
     {
         _currentScreen?.LoadContent();
     }

@@ -4,7 +4,9 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
+    <File>C:/Users/Utilisateur/RiderProjects/jeu_mostre/Content/Boxybold.spritefont</File>
     <File>C:/Users/Utilisateur/RiderProjects/jeu_mostre/Content/cosmofighter.png</File>
+    <File>C:/Users/Utilisateur/RiderProjects/jeu_mostre/Content/enemy2.png</File>
     <File>C:/Users/Utilisateur/RiderProjects/jeu_mostre/Content/missile1.png</File>
     <File>C:/Users/Utilisateur/RiderProjects/jeu_mostre/Content/outerspace.spritefont</File>
     <File>C:/Users/Utilisateur/RiderProjects/jeu_mostre/Content/Purple_Nebula.png</File>
@@ -15,6 +17,8 @@
     <File>C:/Users/Utilisateur/RiderProjects/jeu_mostre/Content/virus1.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
