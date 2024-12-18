@@ -4,17 +4,21 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/cosmofighter.png</File>
-    <File>C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/missile1.png</File>
-    <File>C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/outerspace.spritefont</File>
-    <File>C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/Purple_Nebula.png</File>
-    <File>C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/rb_11922.png</File>
-    <File>C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/ship1.png</File>
-    <File>C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/ship2.png</File>
-    <File>C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/ship3.png</File>
-    <File>C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/virus1.png</File>
+    <File>C:/Users/Utilisateur/RiderProjects/jeu_mostre/Content/Boxybold.spritefont</File>
+    <File>C:/Users/Utilisateur/RiderProjects/jeu_mostre/Content/cosmofighter.png</File>
+    <File>C:/Users/Utilisateur/RiderProjects/jeu_mostre/Content/enemy2.png</File>
+    <File>C:/Users/Utilisateur/RiderProjects/jeu_mostre/Content/missile1.png</File>
+    <File>C:/Users/Utilisateur/RiderProjects/jeu_mostre/Content/outerspace.spritefont</File>
+    <File>C:/Users/Utilisateur/RiderProjects/jeu_mostre/Content/Purple_Nebula.png</File>
+    <File>C:/Users/Utilisateur/RiderProjects/jeu_mostre/Content/rb_11922.png</File>
+    <File>C:/Users/Utilisateur/RiderProjects/jeu_mostre/Content/ship1.png</File>
+    <File>C:/Users/Utilisateur/RiderProjects/jeu_mostre/Content/ship2.png</File>
+    <File>C:/Users/Utilisateur/RiderProjects/jeu_mostre/Content/ship3.png</File>
+    <File>C:/Users/Utilisateur/RiderProjects/jeu_mostre/Content/virus1.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

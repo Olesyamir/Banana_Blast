@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:p="http://www.univ-grenoble-alpes.fr/l3miage/profile"
+           targetNamespace="http://www.univ-grenoble-alpes.fr/l3miage/profile"
+           elementFormDefault="qualified">
+
+    <!--racine-->
+    <xs:element name="profile" type="p:Profile">
+        
+        <!-- Contrainte d'unicité sur les noms des joueurs -->
+        <xs:unique name="uniqueNom">
+            <xs:selector xpath="joueurs/joueur"/>
+            <xs:field xpath="nom"/>
+        </xs:unique>
+    </xs:element>
+
+    <!--definition du type Profile-->
+    <xs:complexType name="Profile">
+        <xs:sequence>
+            <xs:element name="joueurs" type="p:Joueurs"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!--definition du type Joueurs-->
+    <xs:complexType name="Joueurs">
+        <xs:sequence>
+            <xs:element name="joueur" type="p:Joueur" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!--definition du type Joueur-->
+    <xs:complexType name="Joueur">
+        <xs:sequence>
+            <xs:element name="nom" type="xs:string"/>
+            <xs:element name="sexe" type="p:Typesexe"/>
+            <xs:element name="age">
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="meilleurscore">
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!--enum Typesexe-->
+    <xs:simpleType name="Typesexe">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="M"/>
+            <xs:enumeration value="F"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/virus1.png</SourceFile>
-  <SourceTime>2024-11-25T10:27:33.1600263+01:00</SourceTime>
-  <DestFile>C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/bin/DesktopGL/Content/virus1.xnb</DestFile>
-  <DestTime>2024-11-28T14:09:35.9457545+01:00</DestTime>
+  <SourceFile>C:/Users/Utilisateur/RiderProjects/jeu_mostre/Content/virus1.png</SourceFile>
+  <SourceTime>2024-12-18T13:37:29.9141196+01:00</SourceTime>
+  <DestFile>C:/Users/Utilisateur/RiderProjects/jeu_mostre/Content/bin/DesktopGL/Content/virus1.xnb</DestFile>
+  <DestTime>2024-12-18T14:43:47.9921918+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2024-08-16T19:05:56+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

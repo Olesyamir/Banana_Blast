@@ -1,3 +1,4 @@
+using System.Xml.Serialization;
 using Microsoft. Xna. Framework;
 using Microsoft. Xna. Framework. Graphics;
 using Microsoft. Xna. Framework. Input ;
@@ -6,14 +7,22 @@ namespace BasicMonoGame;
 
 public class Sprite {
     
-    private Texture2D _texture;
+    [XmlIgnore]
+    protected Texture2D _texture;
+    [XmlIgnore]
     protected Vector2 _position;
+    [XmlIgnore]
     private int _size = 100;
+    [XmlIgnore]
     private static readonly int _sizeMin = 10;
+    [XmlIgnore]
     private Color _color = Color . White;
 
+    [XmlIgnore]
     public Texture2D _Texture { get => _texture; init => _texture = value; }
+    [XmlIgnore]
     public int _Size { get => _size; set => _size = value >= _sizeMin?value:_sizeMin; }
+    [XmlIgnore]
     public Rectangle _Rect { get => new Rectangle((int) _position.X, (int)
         _position.Y, _size, _size) ; }
 

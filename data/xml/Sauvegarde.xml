@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jeu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.univ-grenoble-alpes.fr/jeu_monstres">
+    <joueur>
+        <nom>SD</nom>
+        <age>1</age>
+        <health>100</health>
+        <position>
+            <X>250</X>
+            <Y>720</Y>
+        </position>
+        <score>0</score>
+    </joueur>
+    <monstres />
+    <projectiles>
+        <projectile>
+            <position>
+                <X>250</X>
+                <Y>380</Y>
+            </position>
+        </projectile>
+        <projectile>
+            <position>
+                <X>250</X>
+                <Y>485</Y>
+            </position>
+        </projectile>
+        <projectile>
+            <position>
+                <X>250</X>
+                <Y>575</Y>
+            </position>
+        </projectile>
+    </projectiles>
+</jeu>

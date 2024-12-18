@@ -13,10 +13,7 @@ public class GameOverScreen : Screen
     
     public override void Initialize()
     {
-        Global.IsMenu = false;
-        Global.IsPaused = false;
-        Global.IsGame = false;
-        Global.IsGameOver = true;
+        Global._screenState = ScreenState.IsGameOver;
     }
 
     public override void LoadContent()
@@ -31,7 +28,8 @@ public class GameOverScreen : Screen
 
     public override void Update(GameTime gameTime)
     {
-        if (Global.IsGameOver)
+        Scoreboard.Update(gameTime);
+        if (Global._screenState==ScreenState.IsGameOver)
         {
             // Gérer les entrées utilisateur
             Global._pressTime += (float)gameTime.ElapsedGameTime.TotalSeconds;
@@ -68,8 +66,7 @@ public class GameOverScreen : Screen
         switch (selectedIndex)
         {
             case 0:
-                Global._game.Content.Unload();
-                Global._ScreenManager.ChangeScreen(new InGameScreen());
+                Global._ScreenManager.ChangeScreen(new InGameScreen(Global._joueur));
                 break;
             case 1:
                 Global._game.Content.Unload();

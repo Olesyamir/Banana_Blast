@@ -1,6 +1,6 @@
 namespace BasicMonoGame;
 
-public enum TypeCreature
+public enum TypeMonstre
 {
     Bigboss,
     Petit
