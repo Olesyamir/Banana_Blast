@@ -32,3 +32,5 @@ C:\Users\jon4t\RiderProjects\BasicMonoGame\bin\Debug\net8.0\Content\outerspace.x
 C:\Users\jon4t\RiderProjects\BasicMonoGame\bin\Debug\net8.0\Content\rb_11922.xnb
 C:\Users\jon4t\RiderProjects\BasicMonoGame\bin\Debug\net8.0\Content\cosmofighter.xnb
 C:\Users\jon4t\RiderProjects\BasicMonoGame\bin\Debug\net8.0\Content\Purple_Nebula.xnb
+C:\Users\jon4t\RiderProjects\BasicMonoGame\bin\Debug\net8.0\Content\Boxybold.xnb
+C:\Users\jon4t\RiderProjects\BasicMonoGame\bin\Debug\net8.0\Content\enemy2.xnb
