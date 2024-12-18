@@ -32,6 +32,7 @@ public class Joueur : GameObject
     
     [XmlIgnore]
     private int _sizeMax = 100;
+    
 
     public Joueur():base(null,Vector2.Zero,0)
     {

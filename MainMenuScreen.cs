@@ -51,8 +51,14 @@ public class MainMenuScreen : Screen
                 
                 if (Keyboard.GetState().IsKeyDown(Keys.Enter))
                 {
-                    HandleMenuSelection(gameTime);
+                    Global.IsEntree = true;
+                }
+
+                if (Keyboard.GetState().IsKeyDown(Keys.Enter))
+                {
+                    Global.IsEntree = false;                    
                     Global._pressTime = 0;
+                    HandleMenuSelection(gameTime);
                 }
 
             }

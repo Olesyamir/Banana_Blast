@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<partie xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.univ-grenoble-alpes.fr/partie">
+  <nomjoueur>JO</nomjoueur>
+  <date>2024-12-18</date>
+  <score>9</score>
+</partie>

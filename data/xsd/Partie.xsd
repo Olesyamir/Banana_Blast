@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:par="http://www.univ-grenoble-alpes.fr/partie"
+           targetNamespace="http://www.univ-grenoble-alpes.fr/partie"
+           elementFormDefault="qualified">
+
+    <!-- racine -->
+    <xs:element name="partie" type="par:Partie"/>
+
+    <xs:complexType name="Partie">
+        <xs:sequence>
+            <xs:element name="nomjoueur" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="date" type="xs:date" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="score" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

@@ -54,9 +54,14 @@ public class PauseScreen : Screen
                 }
                 if (Keyboard.GetState().IsKeyDown(Keys.Enter))
                 {
-                    HandlePauseSelection(gameTime);
-                    Global._pressTime = 0;
+                    Global.IsEntree = true;
                 }
+                if (Keyboard.GetState().IsKeyUp(Keys.Enter) && Global.IsEntree)
+                {
+                    HandlePauseSelection(gameTime);
+                    Global.IsEntree = false;
+                    Global._pressTime = 0;
+                } 
 
             }
 
@@ -76,7 +81,11 @@ public class PauseScreen : Screen
             case 1:
                 //Sauvegarde de la partie et mise à jour des stats du joueurs
                 XMLManager<InGameScreen> GameDeserializer = new XMLManager<InGameScreen>();
-                GameDeserializer.Save("../../../data/xml/Sauvegarde.xml",jeu);
+                //nom du fichier de sauvegarde créé    
+                string path = "Sauvegarde.xml";
+                GameDeserializer.Save("../../../data/xml/"+path,jeu);
+                //Sauvegarde du nom du fichier dans le XML qui contient la liste des fichiers
+                
                 break;
             case 2:
                 Global._game.Content.Unload();
