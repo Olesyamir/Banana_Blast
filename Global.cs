@@ -9,7 +9,8 @@ public class Global
     public static float _Temps { get; set; }
     
     public static Joueur _joueur { get; set; }
-    
+
+    public static bool IsLoad { get; set; } = false;
     public static ScreenState _screenState { get; set; }
     
     public static SpriteBatch _spriteBatch;

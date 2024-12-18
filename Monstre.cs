@@ -4,34 +4,54 @@ using Microsoft. Xna. Framework;
 using Microsoft. Xna. Framework. Graphics;
 namespace BasicMonoGame;
 
-[Serializable][XmlRoot("monstre",Namespace="http://www.univ-grenoble-alpes.fr/jeu_monstres")]
+[XmlRoot("monstre",Namespace="http://www.univ-grenoble-alpes.fr/jeu_monstres")][Serializable]
 public class Monstre : GameObject
-{ 
-    [XmlElement("health")]
-    private int _Health{get; set; }
+{
+    [XmlIgnore]
+    private int _health;
     
     [XmlIgnore]
     private readonly int _damage;
     
+    [XmlElement("health")]
+    public int _Health{get=>_health; set=>_health=value; }
+    
     [XmlIgnore]
     public Animation _animation;
     
-    [XmlElement("typemonstre")]
-    private TypeMonstre _typemonstre{ get; set; }
+    [XmlIgnore]
+    private TypeMonstre _typemonstre;
+    
+    [XmlElement("position")]
+    public Vector2 _jposition { get=>_position; set => _position = value; }
+    
+    [XmlElement("type")]
+    public TypeMonstre _Typemonstre{ get => _typemonstre; set=>_typemonstre=value; }
+
+    public Monstre() : base(null, Vector2.Zero, 0)
+    {
+        _Size = 100;
+        _damage = 100;
+        _texture=Global._Content.Load<Texture2D>("enemy2");
+        _animation = new Animation(_texture,9,5,0.1f,true);
+        setSpeedY(0.5f);
+        setSpeedX(0.5f);
+    }
+    
     public Monstre(TypeMonstre monstre, Texture2D texture, Vector2 position, int size) : base(texture, position, size)
     {
         _typemonstre = monstre;
         if (_typemonstre == TypeMonstre.Petit)
         {
             _animation = new Animation(texture,9,5,0.1f,true);
-            _Health = 50;
+            _health = 50;
             _damage = 100;
             setSpeedY(0.5f);
             setSpeedX(0.5f);
         }
         if (_typemonstre == TypeMonstre.Bigboss)
         {
-            _Health = 100;
+            _health = 100;
             _damage = 35;
             setSpeedX(0.02f);
             setSpeedY(0.05f);
@@ -45,11 +65,11 @@ public class Monstre : GameObject
 
     public int getHealth()
     {
-        return _Health;
+        return _health;
     }
     public void MonsterGotHit(int damage)
     {
-        _Health -= damage;
+        _health -= damage;
     }
 
     public void Update(GameTime gameTime)

@@ -8,7 +8,5 @@ public enum ScreenState
         
     IsGameOver,
         
-    IsSaveScreen,
-        
     IsInitialize
 }

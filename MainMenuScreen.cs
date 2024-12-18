@@ -75,7 +75,11 @@ public class MainMenuScreen : Screen
             case 1:
                 // Load
                 XMLManager<InGameScreen> GameSerializer = new XMLManager<InGameScreen>();
-                var jeu = GameSerializer.Load("Sauvegarde.xml");
+                var jeu = GameSerializer.Load("../../../data/xml/Sauvegarde.xml");
+                //jeu.Initialize();
+               // jeu.LoadContent();
+                Global._joueur = jeu._ship;
+                Global.IsLoad = true;
                 Global._ScreenManager.ChangeScreen(jeu);
                 break;
             case 2:
