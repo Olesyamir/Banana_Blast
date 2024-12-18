@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:g="http://www.univ-grenoble-alpes.fr/l3miage/games"
+           targetNamespace="http://www.univ-grenoble-alpes.fr/l3miage/games"
+           elementFormDefault="qualified">
+
+    <!-- Définir l'élément racine 'Games' -->
+    <xs:element name="Games">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="parties" type="g:Parties"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Type Parties, qui contient une ou plusieurs parties -->
+    <xs:complexType name="Parties">
+        <xs:sequence>
+            <xs:element name="partie" maxOccurs="unbounded" type="g:Partie"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Type Partie, avec les informations de chaque partie -->
+    <xs:complexType name="Partie">
+        <xs:sequence>
+            <xs:element name="nomjoueur" type="xs:string"/>
+            <xs:element name="date" type="xs:date"/>
+            <xs:element name="score" type="xs:int"/>
+            <xs:element name="difficulte" type="xs:string"/>
+            <xs:element name="duree" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

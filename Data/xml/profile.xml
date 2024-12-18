@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<profile xmlns="http://www.univ-grenoble-alpes.fr/l3miage/jeu_video"
+<profile xmlns="http://www.univ-grenoble-alpes.fr/l3miage/profile"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://www.univ-grenoble-alpes.fr/l3miage/jeu_video ../xsd/profile.xsd">
+         xsi:schemaLocation="http://www.univ-grenoble-alpes.fr/l3miage/profile ../xsd/profile.xsd">
     
     <joueurs>
         
@@ -11,6 +11,13 @@
             <age>21</age>
             <meilleurscore>1400</meilleurscore>
         </joueur>
+
+        <joueur>
+            <nom>John Doe</nom>
+            <sexe>M</sexe>
+            <age>16</age>
+            <meilleurscore>1200</meilleurscore>
+        </joueur>
         
         <joueur>
             <nom>Jennie</nom>
@@ -18,6 +25,7 @@
             <age>16</age>
             <meilleurscore>100</meilleurscore>
         </joueur>
+        
     </joueurs>
     
 </profile>

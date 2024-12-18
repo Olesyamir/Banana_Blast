@@ -10,13 +10,13 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("jeu_monstre")]
-[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+448975d7673d66efd09217a4d3dadc85e71744bb")]
-[assembly: System.Reflection.AssemblyProductAttribute("jeu_monstre")]
-[assembly: System.Reflection.AssemblyTitleAttribute("jeu_monstre")]
-[assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
+//[assembly: System.Reflection.AssemblyCompanyAttribute("jeu_monstre")]
+//[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
+//[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+//[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+87bc4f48f89edef19bf673783715c915038b807d")]
+//[assembly: System.Reflection.AssemblyProductAttribute("jeu_monstre")]
+//[assembly: System.Reflection.AssemblyTitleAttribute("jeu_monstre")]
+//[assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Généré par la classe MSBuild WriteCodeFragment.
 

@@ -1,0 +1,15 @@
+C:\Users\Utilisateur\RiderProjects\jeu_mostre\XMLValidation\obj\Debug\net9.0\XMLValidation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Utilisateur\RiderProjects\jeu_mostre\XMLValidation\obj\Debug\net9.0\XMLValidation.AssemblyInfoInputs.cache
+C:\Users\Utilisateur\RiderProjects\jeu_mostre\XMLValidation\obj\Debug\net9.0\XMLValidation.AssemblyInfo.cs
+C:\Users\Utilisateur\RiderProjects\jeu_mostre\XMLValidation\obj\Debug\net9.0\XMLValidation.csproj.CoreCompileInputs.cache
+C:\Users\Utilisateur\RiderProjects\jeu_mostre\XMLValidation\obj\Debug\net9.0\XMLValidation.sourcelink.json
+C:\Users\Utilisateur\RiderProjects\jeu_mostre\XMLValidation\bin\Debug\net9.0\XMLValidation.exe
+C:\Users\Utilisateur\RiderProjects\jeu_mostre\XMLValidation\bin\Debug\net9.0\XMLValidation.deps.json
+C:\Users\Utilisateur\RiderProjects\jeu_mostre\XMLValidation\bin\Debug\net9.0\XMLValidation.runtimeconfig.json
+C:\Users\Utilisateur\RiderProjects\jeu_mostre\XMLValidation\bin\Debug\net9.0\XMLValidation.dll
+C:\Users\Utilisateur\RiderProjects\jeu_mostre\XMLValidation\bin\Debug\net9.0\XMLValidation.pdb
+C:\Users\Utilisateur\RiderProjects\jeu_mostre\XMLValidation\obj\Debug\net9.0\XMLValidation.dll
+C:\Users\Utilisateur\RiderProjects\jeu_mostre\XMLValidation\obj\Debug\net9.0\refint\XMLValidation.dll
+C:\Users\Utilisateur\RiderProjects\jeu_mostre\XMLValidation\obj\Debug\net9.0\XMLValidation.pdb
+C:\Users\Utilisateur\RiderProjects\jeu_mostre\XMLValidation\obj\Debug\net9.0\XMLValidation.genruntimeconfig.cache
+C:\Users\Utilisateur\RiderProjects\jeu_mostre\XMLValidation\obj\Debug\net9.0\ref\XMLValidation.dll

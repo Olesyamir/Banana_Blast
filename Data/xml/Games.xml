@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Games xmlns="http://www.univ-grenoble-alpes.fr/l3miage/games"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://www.univ-grenoble-alpes.fr/l3miage/games ../xsd/Games.xsd">
+
+    <parties>
+        <partie>
+            <nomjoueur>John Doe</nomjoueur>
+            <date>2024-12-16</date>
+            <score>1200</score>
+            <difficulte>Hard</difficulte>
+            <duree>45 min</duree>
+           
+        </partie>
+
+        <partie>
+            <nomjoueur>John Rami</nomjoueur>
+            <date>2024-11-15</date>
+            <score>1400</score>
+            <difficulte>Medium</difficulte>
+            <duree>30 min</duree>
+            
+        </partie>
+
+        <partie>
+            <nomjoueur>John Doe</nomjoueur>
+            <date>2024-12-15</date>
+            <score>700</score>
+            <difficulte>Easy</difficulte>
+            <duree>20 min</duree>
+        </partie>
+
+        <partie>
+            <nomjoueur>John Doe</nomjoueur>
+            <date>2021-12-15</date>
+            <score>140</score>
+            <difficulte>Easy</difficulte>
+            <duree>10 min</duree>
+        </partie>
+    </parties>
+</Games>

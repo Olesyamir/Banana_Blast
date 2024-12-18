@@ -6,6 +6,7 @@
 
     <!--racine-->
     <xs:element name="profile" type="p:Profile">
+        
         <!-- Contrainte d'unicité sur les noms des joueurs -->
         <xs:unique name="uniqueNom">
             <xs:selector xpath="joueurs/joueur"/>
