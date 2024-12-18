@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.JavaScript;
+using System.Runtime.Serialization;
 using System.Xml.Serialization;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -10,33 +12,59 @@ namespace BasicMonoGame;
 [XmlRoot("jeu",Namespace ="http://www.univ-grenoble-alpes.fr/jeu_monstres" )][Serializable]
 public class InGameScreen : Screen
 {
-    [XmlElement("joueur")]
-    public Joueur _ship { get; set; }//instance de Player
-    
-    [XmlElement("monstres")]
-    private List<Monstre> _Monstres
-    {
-        get => MonstreManager._Monstres;
-        set => MonstreManager._Monstres = value;
-    }
+    [XmlIgnore]
+    public Joueur _ship;//instance de Player
 
     [XmlIgnore]
+    public static String date=((DateTime.Today).ToShortDateString());
+    [XmlIgnore]
+    public String _date=(date.Substring(6,4))+"-"+(date.Substring(3,2))+"-"+(date.Substring(0,2));
+
+            
+    [XmlIgnore]
     private readonly GraphicsDeviceManager _graphics;
+    
     [XmlIgnore]
     private SpriteFont font;
+    
+    [XmlIgnore]
     private BackgroundManager _background;
+    
     [XmlIgnore]
     private Texture2D exploTexture;//explosion texture
-    List<Projectile> _projectiles;
-    List<Projectile> _killprojectiles;
+    
+    [XmlIgnore]
+    public List<Projectile> _projectiles;
+    
+    [XmlIgnore]
+    private List<Projectile> _killprojectiles;
+    
+    [XmlIgnore]
     private List<Explosion> explosions;
+    
+    [XmlElement("date")]
+    public String _Date { get => _date;set=>_date=value; }
+    
+    [XmlElement("joueur")]
+    public Joueur _Ship { get=>_ship; set => _ship = value; }//instance de Player
+
+
+    [XmlElement("monstres")] 
+    public Monstres _Monstres { get=>MonstreManager.GetMonstres(); set=>MonstreManager.SetMonstres(value); }
+
+    [XmlElement("projectiles")]
+    public Projectiles _Projectiles
+    {
+        get => new Projectiles{ ListeProjectiles = _projectiles };//getter pour _projectiles dans le contexte de serialisation
+        set => _projectiles = value?.ListeProjectiles ?? new List<Projectile>();//setter _projectiles dans le contexte de deserialisation
+    }
 
     public InGameScreen()
     {
         Scoreboard.Init();
         _graphics = Global._graphics;
         Global._game.IsMouseVisible = true;
-        _ship = Global._joueur;
+        //_Ship = _ship;
     }
 
     public InGameScreen(Joueur joueur)
@@ -45,6 +73,8 @@ public class InGameScreen : Screen
         _graphics = Global._graphics;
         Global._game.IsMouseVisible = true;
         _ship = joueur;
+        MonstreManager.SetMonstres(_Monstres);
+        
     }
     
 
@@ -62,7 +92,10 @@ public class InGameScreen : Screen
         Texture2D bgTexture = Global._game.Content.Load<Texture2D>("Purple_Nebula");
         _background.Initialize(bgTexture); 
         exploTexture = Global._game.Content.Load<Texture2D>("rb_11922");
-        _projectiles = new List<Projectile>();
+        if (!Global.IsLoad)
+        {
+            _projectiles = new List<Projectile>();
+        }
         _killprojectiles = new List<Projectile>();
         explosions = new List<Explosion>();
     }
@@ -131,7 +164,7 @@ public override void Update(GameTime gameTime)
         MonstreManager.Update(gameTime);
 
         // Gestion des collisions
-        foreach (var s in MonstreManager._Monstres)
+        foreach (var s in MonstreManager._monstres)
         {
             s.Update(gameTime);
 

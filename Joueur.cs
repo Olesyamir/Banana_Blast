@@ -6,26 +6,39 @@ using Microsoft. Xna. Framework. Graphics;
 using Microsoft. Xna. Framework. Input ;
 namespace BasicMonoGame;
 
-[Serializable][XmlRoot("joueur",Namespace="http://www.univ-grenoble-alpes.fr/jeu_monstres")]
+[XmlRoot("joueur",Namespace="http://www.univ-grenoble-alpes.fr/jeu_monstres")][Serializable]
 public class Joueur : GameObject
 {
-    [XmlElement("nom")]
-    private string _name { get; set; }
+    private string _name;
     
-    [XmlElement("age")]
-    private int _age { get; set; }
-    
-    [XmlElement("health")]
-    private int _health { get; set; }
+    [XmlElement("nom")] 
+    public string _Name{ get=>_name; set => _name=value; }
+
+    private int _age;
+    [XmlElement("age")] 
+    public string _Age{ get=>_age.ToString(); set=>_age=int.Parse(value); }
+
+    private int _health;
+    [XmlElement("health")] 
+    public int _Health{ get=>_health; set=>_health=value; }
     
     [XmlElement("position")]
-    private Vector2 _jposition { get=>_position; set => _position = value; }
+    public Vector2 _jposition { get=>_position; set => _position = value; }
     
-    private static int score { get => Scoreboard.getScore();set=>Scoreboard.setScore(value); }
+    private static int _score { get => Scoreboard.getScore();set=>Scoreboard.setScore(value);}
+    
+    [XmlElement("score")]
+    public int _Score { get=>_score; set=>_score = value; }
     
     [XmlIgnore]
     private int _sizeMax = 100;
-    
+
+    public Joueur():base(null,Vector2.Zero,0)
+    {
+        _Size = 100;
+        setPos(_jposition.X,_jposition.Y);
+        _texture=Global._game.Content.Load < Texture2D >("ship2") ;
+    }
     public Joueur(Texture2D texture, Vector2 position, int size) : base(texture, position, size)
     {
         _name = "";

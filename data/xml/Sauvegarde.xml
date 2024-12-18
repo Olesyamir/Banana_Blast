@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jeu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.univ-grenoble-alpes.fr/jeu_monstres">
+  <date>2024-12-18</date>
+  <joueur>
+    <nom>QQS</nom>
+    <age>1</age>
+    <health>100</health>
+    <position>
+      <X>250</X>
+      <Y>720</Y>
+    </position>
+    <score>0</score>
+  </joueur>
+  <monstres />
+  <projectiles />
+</jeu>

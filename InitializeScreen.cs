@@ -107,7 +107,8 @@ public class InitializeScreen : Screen
                         _text += key.ToString();
                         Global._pressTime = 0;
                     }
-                    else if (_isActive2 && _text2.Length < 2 && key.ToString().Length==7 && char.IsDigit(key.ToString(),6))//pour age si entree est un chiffre
+                    else if (_isActive2 && _text2.Length < 2 && (key.ToString().Length==7 && (char.IsDigit(key.ToString(), 6))
+                                                                 ||(key >= Keys.D0 && key <= Keys.D9)))//pour age si entree est un chiffre
                     {
                         _text2 += key.ToString()[^1];//dernier char de "Numpad[X]" avec X entre 0 et 9
                         Global._pressTime = 0;
@@ -123,6 +124,7 @@ public class InitializeScreen : Screen
                     {
                         //On nomme du joueur et on lance la partie 
                         _joueur.setName(_text);
+                        _joueur.setAge(int.Parse(_text2));
                         Global._joueur = _joueur;
                         Global._ScreenManager.ChangeScreen(new InGameScreen(_joueur));
                         //Code pour initialiser joueur et pour mettre à jour le scoreboard et profil si score actuelle > meilleur score

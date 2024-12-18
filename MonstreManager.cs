@@ -6,19 +6,36 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
 namespace BasicMonoGame;
-[Serializable][XmlRoot("Monstres",Namespace = "http://www.univ-grenoble-alpes.fr/jeu_monstres")]
+
+
 public static class MonstreManager
 {
-    [XmlElement(ElementName = "Monstre")]
-    public static List<Monstre> _Monstres { get; set; } = new List<Monstre>();
+  
+    public static List<Monstre> _monstres { get; set; } = new List<Monstre>();
     
-    [XmlIgnore]
+
     private static Texture2D _texture;
+    
+   
     private static float _spawnCooldown;
-    [XmlIgnore]
+    
+   
     private static float _spawnTime;
-    [XmlIgnore]
+    
+
     private static int _padding;
+    
+
+
+    public static Monstres GetMonstres()
+    {
+        return new Monstres { ListeMonstres = _monstres };
+    }
+    
+    public static void SetMonstres(Monstres liste)
+    {
+        _monstres = liste.ListeMonstres ?? new List<Monstre>();
+    }
 
     public static void Init()
     {
@@ -55,7 +72,7 @@ public static class MonstreManager
     
     private static void AddMonstre()
     {
-        _Monstres.Add(new Monstre(TypeMonstre.Petit,_texture ,Position(TypeMonstre.Petit),60));
+        _monstres.Add(new Monstre(TypeMonstre.Petit,_texture ,Position(TypeMonstre.Petit),60));
         //_Creatures.Add(new Creature(TypeMonstre.Petit,_texture ,new Vector2(0,0),60));
     }
 
@@ -64,22 +81,22 @@ public static class MonstreManager
         if (Global._screenState==ScreenState.IsGame)
         {
             _spawnTime -= (float)gameTime.ElapsedGameTime.TotalSeconds;
-            _Monstres.RemoveAll((c) => c.getHealth() <= 0);
-            _Monstres.Find((c) => c.getHealth() <= 0)?._animation.Stop();
+            _monstres.RemoveAll((c) => c.getHealth() <= 0);
+            _monstres.Find((c) => c.getHealth() <= 0)?._animation.Stop();
             while (_spawnTime <= 0)
             {
                 _spawnTime += _spawnCooldown;
                 AddMonstre();
             }
 
-            foreach (var c in _Monstres)
+            foreach (var c in _monstres)
             {
                 c.Update(gameTime);
             }
         }
         if (Global._screenState== ScreenState.IsMenu || Global._screenState == ScreenState.IsGameOver)
         {
-            _Monstres.Clear();
+            _monstres.Clear();
         }
     }
     
@@ -87,7 +104,7 @@ public static class MonstreManager
     {
         if (Global._screenState ==ScreenState.IsGame)
         {
-            foreach (var c in _Monstres)
+            foreach (var c in _monstres)
             {
                 c.Draw();
             }

@@ -76,7 +76,7 @@ public class PauseScreen : Screen
             case 1:
                 //Sauvegarde de la partie et mise à jour des stats du joueurs
                 XMLManager<InGameScreen> GameDeserializer = new XMLManager<InGameScreen>();
-                GameDeserializer.Save("C:\\Users\\jon4t\\RiderProjects\\BasicMonoGame\\data\\xml\\Sauvegarde.xml",jeu);
+                GameDeserializer.Save("../../../data/xml/Sauvegarde.xml",jeu);
                 break;
             case 2:
                 Global._game.Content.Unload();

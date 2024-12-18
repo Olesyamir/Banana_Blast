@@ -30,7 +30,6 @@ public class Game1 : Game
     {
         Global._spriteBatch = new SpriteBatch(GraphicsDevice);
         Global._ScreenManager.ChangeScreen(Global._GameScreen);
-
     }
 
     protected override void Update(GameTime gameTime)
