@@ -14,6 +14,11 @@ public class GameOverScreen : Screen
     public override void Initialize()
     {
         Global._screenState = ScreenState.IsGameOver;
+        
+        //Enregistre nom du fichier dans fichiers.xml
+        int nb = SaveFileManager.AddFileToMasterXml();
+        //Enregistre partie joué dans un fichier xml
+        SaveFileManager.EnregistrePartie(Global._joueur.getName(),Scoreboard.getScore(),Global._dateserialisation,"Partie"+nb+".xml");
     }
 
     public override void LoadContent()
