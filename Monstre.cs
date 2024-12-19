@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Runtime.Serialization;
 using System.Xml.Serialization;
 using Microsoft. Xna. Framework;
 using Microsoft. Xna. Framework. Graphics;
@@ -11,10 +13,7 @@ public class Monstre : GameObject
     private int _health;
     
     [XmlIgnore]
-    private readonly int _damage;
-    
-    [XmlElement("health")]
-    public int _Health{get=>_health; set=>_health=value; }
+    private int _damage;
     
     [XmlIgnore]
     public Animation _animation;
@@ -22,27 +21,59 @@ public class Monstre : GameObject
     [XmlIgnore]
     private TypeMonstre _typemonstre;
     
+    [XmlIgnore]
+    public List<MoveMethod> _MoveMethods;
+    
+    [XmlElement("health")]
+    public int _Health{get=>_health; set=>_health=value; }
+
+    
     [XmlElement("position")]
     public Vector2 _jposition { get=>_position; set => _position = value; }
     
     [XmlElement("type")]
+    //public TypeMonstre _Typemonstre{ get; set; }
     public TypeMonstre _Typemonstre{ get => _typemonstre; set=>_typemonstre=value; }
-
+   /*
+    [OnDeserialized]
+    private void OnDeserialized(StreamingContext context)
+    {
+        Console.WriteLine($"Désérialisé : {_Typemonstre}");
+        _MoveMethods = [Moves.Down, Moves.ZigZag, Moves.ZigZagReverse];
+        if (_Typemonstre == TypeMonstre.Petit)
+        {
+            _texture = Global._Content.Load<Texture2D>("enemy2");
+            _animation = new Animation(_texture, 9, 5, 0.1f, true);
+        }
+        else{
+                _texture = Global._Content.Load<Texture2D>("Nyan");
+                _animation = new Animation(_texture, 1, 5, 0.1f, true);
+        }
+    }
+    */
+    public delegate Vector2 MoveMethod(Vector2 position,float move,Vector2 speed);
+    
     public Monstre() : base(null, Vector2.Zero, 0)
     {
-        _Size = 100;
-        _damage = 100;
-        _texture=Global._Content.Load<Texture2D>("enemy2");
-        _animation = new Animation(_texture,9,5,0.1f,true);
+       // _Size = 100;
+         _MoveMethods = [Moves.Down, Moves.ZigZag, Moves.ZigZagReverse];
+        _typemonstre = 0;
+        //_texture=Global._Content.Load<Texture2D>("enemy2");
+        //_animation = new Animation(_texture,9,5,0.1f,true);
+        _health = 50;
+        _damage = 0;
         setSpeedY(0.5f);
         setSpeedX(0.5f);
     }
     
     public Monstre(TypeMonstre monstre, Texture2D texture, Vector2 position, int size) : base(texture, position, size)
     {
+
         _typemonstre = monstre;
         if (_typemonstre == TypeMonstre.Petit)
         {
+            _texture = texture;
+           // _rect = new Rectangle((int)_position.X, (int)_position.Y, _texture.Width/5, _texture.Height/9);
             _animation = new Animation(texture,9,5,0.1f,true);
             _health = 50;
             _damage = 100;
@@ -51,11 +82,24 @@ public class Monstre : GameObject
         }
         if (_typemonstre == TypeMonstre.Bigboss)
         {
+            _texture = texture;
+            //_rect = new Rectangle((int)_position.X, (int)_position.Y, _texture.Width/5, _texture.Height/1);
+            _animation = new Animation(texture,4,4,0.1f,true);
             _health = 100;
-            _damage = 35;
-            setSpeedX(0.02f);
-            setSpeedY(0.05f);
+            _damage = 100;
+            setSpeedX(2.5f);
+            setSpeedY(0.1f);
+            _MoveMethods = [Moves.Down,Moves.ZigZag,Moves.ZigZagReverse];
         }
+    }
+
+    public MoveMethod? GetMove(int index)
+    {
+        if (index >= 0 && index < _MoveMethods.Count)
+        {
+            return _MoveMethods[index];
+        }
+        return null;
     }
 
     public int getDamage()//retourne les dommages causés par la créature
@@ -71,34 +115,76 @@ public class Monstre : GameObject
     {
         _health -= damage;
     }
+    
+    public bool LimiterPositionGauche(int largeurEcran, int hauteurEcran)
+    {
+        var nouveauX = Math.Clamp(_position.X, 0, largeurEcran - 1);
+        return nouveauX == 0;
+    }
+    public bool LimiterPositionDroite(int largeurEcran, int hauteurEcran)
+    {
+        var nouveauX = Math.Clamp(_position.X, 0, largeurEcran - 1);
+        return  nouveauX == largeurEcran - 1;
+    }
+
 
     public void Update(GameTime gameTime)
     {
+        if (_texture == null)
+        {
+            if (_typemonstre == TypeMonstre.Petit)
+            {
+                _texture = Global._Content.Load<Texture2D>("enemy2");
+                //_rect = new Rectangle((int)_position.X, (int)_position.Y, _texture.Width/5, _texture.Height/9);
+                _animation = new Animation(_texture,9,5,0.1f,true);
+                _health = 50;
+                _damage = 100;
+                setSpeedY(0.5f);
+                setSpeedX(0.5f);
+            }
+            if (_typemonstre == TypeMonstre.Bigboss)
+            {
+                _texture = Global._Content.Load<Texture2D>("NpcWeed");
+                //_rect = new Rectangle((int)_position.X, (int)_position.Y, 150, 69);
+                _animation = new Animation(_texture,4,4,0.1f,true);
+                _health = 100;
+                _damage = 100;
+                setSpeedX(2.5f);
+                setSpeedY(0.1f);
+                _MoveMethods = [Moves.Down,Moves.ZigZag,Moves.ZigZagReverse];
+            }
+            
+        }
+
         if (_typemonstre == TypeMonstre.Petit)
         {
             _position.Y += 1 + _speed.Y;
         }
         else if (_typemonstre == TypeMonstre.Bigboss)
         {
-            _position.X = 1 + _speed.X;
-            if (780 - _position.X == 5)
+            if (_health == 100)
             {
-                _position.X = 1 - _speed.X;
-                _position.Y = 1 + _speed.Y;
+                var mafonction = GetMove(0);
+                _position = mafonction(_position, 1f, _speed);
             }
-            else if (_position.X == 5)
+            else if (LimiterPositionGauche(500, 780))
             {
-                _position.X = 1 + _speed.X;
-                _position.Y = 2 + _speed.Y;
+                var mafonction = GetMove(1);
+                _position = mafonction(_position, 1f, _speed);
+            }
+            else if (LimiterPositionDroite(500, 780))
+            {
+                var mafonction = GetMove(2);
+                _position = mafonction(_position, 1f, _speed);
             }
         }
 
-        _animation.Update(gameTime);
+        _animation?.Update(gameTime);
     }
     
     public void Draw()
     {
-        _animation.Draw(getPos());
+        _animation?.Draw(getPos(),_typemonstre);
     }
 
 

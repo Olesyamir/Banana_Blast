@@ -34,3 +34,5 @@ C:\Users\jon4t\RiderProjects\BasicMonoGame\bin\Debug\net8.0\Content\cosmofighter
 C:\Users\jon4t\RiderProjects\BasicMonoGame\bin\Debug\net8.0\Content\Purple_Nebula.xnb
 C:\Users\jon4t\RiderProjects\BasicMonoGame\bin\Debug\net8.0\Content\Boxybold.xnb
 C:\Users\jon4t\RiderProjects\BasicMonoGame\bin\Debug\net8.0\Content\enemy2.xnb
+C:\Users\jon4t\RiderProjects\BasicMonoGame\bin\Debug\net8.0\Content\Nyan.xnb
+C:\Users\jon4t\RiderProjects\BasicMonoGame\bin\Debug\net8.0\Content\NpcWeed.xnb

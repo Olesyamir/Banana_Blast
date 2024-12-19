@@ -13,7 +13,7 @@ public static class Scoreboard
 
     public static void Init()
     {
-        position = new Vector2(0, 0);
+        position = new Vector2(0, 5);
         //score = 0;
         font = Global._Content.Load<SpriteFont>("Boxybold");
     }

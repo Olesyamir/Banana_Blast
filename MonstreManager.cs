@@ -14,7 +14,7 @@ public static class MonstreManager
     public static List<Monstre> _monstres { get; set; } = new List<Monstre>();
     
 
-    private static Texture2D _texture;
+    
     
    
     private static float _spawnCooldown;
@@ -24,6 +24,8 @@ public static class MonstreManager
     
 
     private static int _padding;
+
+    private static Random random;
     
 
 
@@ -40,7 +42,6 @@ public static class MonstreManager
     public static void Init()
     {
         // Assurez-vous que Globals.Content est correctement défini dans votre projet
-        _texture = Global._Content.Load<Texture2D>("enemy2");
         _spawnCooldown = 2f;
         _spawnTime = _spawnCooldown;
 
@@ -53,26 +54,42 @@ public static class MonstreManager
         {
             return 5;
         }
-        else if (creature == TypeMonstre.Bigboss)
+        if (creature == TypeMonstre.Bigboss)
         {
-            return 12;
+            return 4;
         }
 
         return 1;
     }
 
-    private static Vector2 Position(TypeMonstre type)
+    private static Vector2 Position(TypeMonstre type,Texture2D texture)
     {
-        _padding = _texture.Width / (widthdivisor(type) * 2);
-        Random random = new Random();
+        _padding = texture.Width / (widthdivisor(type) * 2);
+
+        random = new Random();
         int x = random.Next(_padding, 500 - _padding); // Exemple de largeur 800
-        Vector2 position = new Vector2(x,-40);
+        Vector2 position = new Vector2(x,-30);
         return position;
     }
     
     private static void AddMonstre()
     {
-        _monstres.Add(new Monstre(TypeMonstre.Petit,_texture ,Position(TypeMonstre.Petit),60));
+        Texture2D texture;
+        List<int> liste = [0, 0, 0, 0, 0, 0, 0, 1, 1, 1];
+        random = new Random();
+        int i = random.Next(0, liste.Count);
+        switch (liste[i])
+        {
+            case 0:
+                texture = Global._Content.Load<Texture2D>("enemy2");
+                _monstres.Add(new Monstre(TypeMonstre.Petit,texture ,Position((TypeMonstre)liste[i],texture),60));
+                break;
+            case 1:
+                texture = Global._Content.Load<Texture2D>("NpcWeed");
+                _monstres.Add(new Monstre(TypeMonstre.Bigboss,texture ,Position((TypeMonstre)liste[i],texture),100));
+                break;
+
+        }
         //_Creatures.Add(new Creature(TypeMonstre.Petit,_texture ,new Vector2(0,0),60));
     }
 

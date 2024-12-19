@@ -26,6 +26,5 @@ public class Projectile : GameObject
     public void Update(GameTime gameTime)
     {
         _position.Y -= (1+_speed.Y);
-        Console.WriteLine($"Missile position: {_Rect.X}, {_Rect.Y}");
     }
 }

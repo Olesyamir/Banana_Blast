@@ -126,6 +126,7 @@ public class InitializeScreen : Screen
                         _joueur.setName(_text);
                         _joueur.setAge(int.Parse(_text2));
                         Global._joueur = _joueur;
+                        XMLManager<InGameScreen> GameDeserializer = new XMLManager<InGameScreen>();
                         Global._ScreenManager.ChangeScreen(new InGameScreen(_joueur));
                         //Code pour initialiser joueur et pour mettre à jour le scoreboard et profil si score actuelle > meilleur score
                         //a la fin on met presstime = 0

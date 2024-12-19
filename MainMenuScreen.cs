@@ -12,6 +12,7 @@ public class MainMenuScreen : Screen
 
     public override void Initialize()
     {
+        Global.IsLoad = false;
         Global._screenState = ScreenState.IsMenu;
     }
     
@@ -51,8 +52,14 @@ public class MainMenuScreen : Screen
                 
                 if (Keyboard.GetState().IsKeyDown(Keys.Enter))
                 {
-                    HandleMenuSelection(gameTime);
+                    Global.IsEntree = true;
+                }
+
+                if (Keyboard.GetState().IsKeyDown(Keys.Enter))
+                {
+                    Global.IsEntree = false;                    
                     Global._pressTime = 0;
+                    HandleMenuSelection(gameTime);
                 }
 
             }

@@ -18,19 +18,23 @@ public class Sprite {
     [XmlIgnore]
     private Color _color = Color . White;
 
+    public Rectangle _rect ;
+    
     [XmlIgnore]
-    public Texture2D _Texture { get => _texture; init => _texture = value; }
+    public Texture2D _Texture { get => _texture;set => _texture = value; }
     [XmlIgnore]
     public int _Size { get => _size; set => _size = value >= _sizeMin?value:_sizeMin; }
     [XmlIgnore]
     public Rectangle _Rect { get => new Rectangle((int) _position.X, (int)
-        _position.Y, _size, _size) ; }
+        _position.Y, _size, _size) ;}
 
     public Sprite(Texture2D texture, int size)
     {
         _Texture = texture;
         _Size = size;
     }
+    
+
 /*
     public void Update (GameTime gameTime) {
         if (Keyboard.GetState().IsKeyDown(Keys.Up))
@@ -61,15 +65,15 @@ public class Sprite {
         if (_speed.Y < 0) _speed.Y += 0.1f; 
     }
 */
-    public void Draw ( SpriteBatch spriteBatch ) {
-        var origin = new Vector2( _texture.Width / 2f , _texture.Height / 2f ) ;
-        spriteBatch . Draw ( _texture , // Texture2D ,
-            _Rect , // Rectangle destinationRectangle ,
-            null , // Nullable < Rectangle > sourceRectangle ,
-            _color , // Color ,
-            0.0f , // float rotation ,
-            origin , // Vector2 origin ,
-            SpriteEffects . None , // SpriteEffects effects ,
-            0f ) ; // float layerDepth
-        }
+    public void Draw ( SpriteBatch spriteBatch) {
+            var origin = new Vector2(_texture.Width / 2f, _texture.Height / 2f);
+            spriteBatch.Draw(_texture, // Texture2D ,
+                _Rect, // Rectangle destinationRectangle ,
+                null, // Nullable < Rectangle > sourceRectangle ,
+                _color, // Color ,
+                0.0f, // float rotation ,
+                origin, // Vector2 origin ,
+                SpriteEffects.None, // SpriteEffects effects ,
+                0f); // float layerDepth
+    }
 }

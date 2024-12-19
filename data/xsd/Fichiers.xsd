@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:fc="http://www.univ-grenoble-alpes.fr/l3miage/files"
+           targetNamespace="http://www.univ-grenoble-alpes.fr/l3miage/files"
+           elementFormDefault="qualified">
+    
+    <xs:element name="fichiers" type="fc:Fichiers"/>
+    
+    <xs:complexType name="Fichiers">
+        <xs:sequence>
+            <xs:element name="fichier" type="fc:Fichier" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:simpleType name="Fichier">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="Partie[0-9][0-9]?.xml"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+</xs:schema>

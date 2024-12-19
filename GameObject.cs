@@ -14,7 +14,7 @@ public class GameObject : Sprite
    
     public Vector2 getPos()
     {
-        return this._position;
+        return _position;
     }
     
     public void setPos(float x, float y)
