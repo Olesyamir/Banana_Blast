@@ -1,32 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <jeu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.univ-grenoble-alpes.fr/jeu_monstres">
-  <date>2024-12-18</date>
+  <date>2024-12-19</date>
   <joueur>
-    <nom>QSD</nom>
-    <age>11</age>
+    <nom>QDFQ</nom>
+    <age>8</age>
     <health>100</health>
     <position>
-      <X>247.49818</X>
+      <X>102.799545</X>
       <Y>720</Y>
     </position>
-    <score>3</score>
+    <score>8</score>
   </joueur>
   <monstres>
     <monstre>
       <health>50</health>
       <position>
-        <X>180</X>
-        <Y>306.5</Y>
+        <X>369.5</X>
+        <Y>567.60077</Y>
+      </position>
+      <type>Bigboss</type>
+    </monstre>
+    <monstre>
+      <health>50</health>
+      <position>
+        <X>159</X>
+        <Y>331.801</Y>
+      </position>
+      <type>Bigboss</type>
+    </monstre>
+    <monstre>
+      <health>50</health>
+      <position>
+        <X>122</X>
+        <Y>159.5</Y>
       </position>
       <type>Petit</type>
     </monstre>
   </monstres>
-  <projectiles>
-    <projectile>
-      <position>
-        <X>241.89899</X>
-        <Y>345</Y>
-      </position>
-    </projectile>
-  </projectiles>
+  <projectiles />
 </jeu>

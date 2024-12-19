@@ -84,7 +84,7 @@ public class InGameScreen : Screen
         Global._screenState = ScreenState.IsGame;
         _background = new BackgroundManager();
         MonstreManager.Init();
-        _ship.resetHealth(); //(re)initialise vie à 100 (aussi dans le cas d'un restart)
+        if (!Global.IsLoad) _ship.resetHealth(); //(re)initialise vie à 100 (aussi dans le cas d'un restart)
     }
 
     public override void LoadContent()
@@ -172,7 +172,7 @@ public override void Update(GameTime gameTime)
             if (s.getPos().Y >= 600)
             {
                 _ship.playerGotHit(s.getDamage());//les monstres sont passés le joueur perd de la vie
-                s.MonsterGotHit(50);
+                s.MonsterGotHit(s._Health);
             }
             else
             {

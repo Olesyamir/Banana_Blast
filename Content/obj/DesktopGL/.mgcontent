@@ -8,6 +8,8 @@
     <File>C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/cosmofighter.png</File>
     <File>C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/enemy2.png</File>
     <File>C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/missile1.png</File>
+    <File>C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/NpcWeed.png</File>
+    <File>C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/Nyan.png</File>
     <File>C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/outerspace.spritefont</File>
     <File>C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/Purple_Nebula.png</File>
     <File>C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/rb_11922.png</File>
@@ -17,6 +19,8 @@
     <File>C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/virus1.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

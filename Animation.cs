@@ -17,6 +17,8 @@ public class Animation
     private int _nbligne;
     public bool _active = true;
     private bool _loop;
+    private int framewidth;
+    private int frameheight;
 
     public Animation(Texture2D texture,int line ,int frames, float frameTime,bool loop)
     {
@@ -25,8 +27,8 @@ public class Animation
         _texture = texture;
         _frameTime = frameTime;
         _frameTimeLeft = _frameTime;
-        var framewidth = texture.Width / frames;
-        var frameheight = texture.Height/line;
+        framewidth = texture.Width / frames;
+        frameheight = texture.Height/line;
         _nbligne = line;
         for (int j = 0; j < line; j++)
         {
@@ -91,13 +93,26 @@ public class Animation
         }
     }
     
-    public void Draw(Vector2 pos)
+    public void Draw(Vector2 pos,TypeMonstre monstre)
     {
         if (_active)
         {
+            float a;
+            float b;
+            if (monstre == TypeMonstre.Petit)
+            {
+                a = 0.56f;
+                b = 0.3f;
+            }
+            else
+            {
+                a=2.11f;
+                b=2.46f;
+            }
+            var scale = new Vector2(a,b);
             //on affiche les rectangles dans l'ordre d'indice pour faire l'animation
-            Global._spriteBatch.Draw(_texture, pos, _rect[_frame+ (_frames * _ligne)], Color.White, 0, Vector2.Zero, new Vector2(0.5f,0.5f) ,
-                SpriteEffects.None, 1f);
+            Global._spriteBatch.Draw(_texture, pos, _rect[_frame+ (_frames * _ligne)], Color.White, 0, Vector2.Zero, scale ,
+                SpriteEffects.None, 0f);
         }
     }
 }

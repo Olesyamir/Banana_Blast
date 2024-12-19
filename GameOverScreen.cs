@@ -13,6 +13,7 @@ public class GameOverScreen : Screen
     
     public override void Initialize()
     {
+        Global.IsLoad = false;
         Global._screenState = ScreenState.IsGameOver;
         
         //Enregistre nom du fichier dans fichiers.xml

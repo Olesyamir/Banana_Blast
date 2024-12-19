@@ -12,6 +12,7 @@ public class MainMenuScreen : Screen
 
     public override void Initialize()
     {
+        Global.IsLoad = false;
         Global._screenState = ScreenState.IsMenu;
     }
     

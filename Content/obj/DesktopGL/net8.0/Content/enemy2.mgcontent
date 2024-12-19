@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <SourceFile>C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/enemy2.png</SourceFile>
-  <SourceTime>2024-12-16T23:13:58.7844994+01:00</SourceTime>
+  <SourceTime>2024-12-19T03:57:09.9596836+01:00</SourceTime>
   <DestFile>C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/bin/DesktopGL/Content/enemy2.xnb</DestFile>
-  <DestTime>2024-12-16T23:15:19.2445729+01:00</DestTime>
+  <DestTime>2024-12-19T04:26:34.4620297+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2024-08-16T19:05:56+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
