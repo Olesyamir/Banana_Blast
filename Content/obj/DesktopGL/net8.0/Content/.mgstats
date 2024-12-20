@@ -1,1 +1,9 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/jon4t/Downloads/BananaBlast/Content/Boxybold.spritefont","C:/Users/jon4t/Downloads/BananaBlast/Content/bin/DesktopGL/Content/Boxybold.xnb","FontDescriptionProcessor","SpriteFontContent",2071,37922,0,2126919
+"C:/Users/jon4t/Downloads/BananaBlast/Content/enemy2.png","C:/Users/jon4t/Downloads/BananaBlast/Content/bin/DesktopGL/Content/enemy2.xnb","TextureProcessor","Texture2DContent",722094,3383365,0,1254745
+"C:/Users/jon4t/Downloads/BananaBlast/Content/missile1.png","C:/Users/jon4t/Downloads/BananaBlast/Content/bin/DesktopGL/Content/missile1.xnb","TextureProcessor","Texture2DContent",1045,16469,0,0034969
+"C:/Users/jon4t/Downloads/BananaBlast/Content/NpcWeed.png","C:/Users/jon4t/Downloads/BananaBlast/Content/bin/DesktopGL/Content/NpcWeed.xnb","TextureProcessor","Texture2DContent",14787,96853,0,0058835
+"C:/Users/jon4t/Downloads/BananaBlast/Content/outerspace.spritefont","C:/Users/jon4t/Downloads/BananaBlast/Content/bin/DesktopGL/Content/outerspace.xnb","FontDescriptionProcessor","SpriteFontContent",2073,37922,0,018959
+"C:/Users/jon4t/Downloads/BananaBlast/Content/Purple_Nebula.png","C:/Users/jon4t/Downloads/BananaBlast/Content/bin/DesktopGL/Content/Purple_Nebula.xnb","TextureProcessor","Texture2DContent",1146371,4194389,0,1679507
+"C:/Users/jon4t/Downloads/BananaBlast/Content/rb_11922.png","C:/Users/jon4t/Downloads/BananaBlast/Content/bin/DesktopGL/Content/rb_11922.xnb","TextureProcessor","Texture2DContent",628437,6797653,0,1853623
+"C:/Users/jon4t/Downloads/BananaBlast/Content/ship2.png","C:/Users/jon4t/Downloads/BananaBlast/Content/bin/DesktopGL/Content/ship2.xnb","TextureProcessor","Texture2DContent",3101,25685,0,0026148
