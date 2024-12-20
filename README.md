@@ -5,7 +5,7 @@ Des bananes piégées, transformées en objets de destruction, tombent à traver
 
 ## Installation et exécution
 1. Clone la répertoire git
-""" git clone https://github.com/Olesyamir/jeu_mostre.git """
+ """ git clone [https://github.com/Olesyamir/jeu_mostre.git](https://github.com/Olesyamir/Banana_Blast.git) """
 2. Ouvrir un IDE et lancer le jeu. Amusez-vous bien !!! 
 
 
