@@ -1,11 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Xml.Serialization;
-using Microsoft. Xna. Framework;
-using Microsoft. Xna. Framework. Graphics;
-using Microsoft. Xna. Framework. Input ;
-using BasicMonoGame.Screens;
-namespace BasicMonoGame.Entities;
+using BananaBlast.Screens;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
+
+namespace BananaBlast.Entities;
 
 [XmlRoot("joueur",Namespace="http://www.univ-grenoble-alpes.fr/jeu_monstres")][Serializable]
 public class Joueur : GameObject

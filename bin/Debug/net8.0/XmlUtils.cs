@@ -3,12 +3,11 @@ using System.Diagnostics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
-using System.Xml.Resolvers;
 using System.Xml.Schema;
 using System.Xml.XPath;
 using System.Xml.Xsl;
 
-namespace BasicMonoGame;
+namespace BananaBlast;
 
 public static class XmlUtils
 {

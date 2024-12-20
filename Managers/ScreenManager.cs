@@ -1,7 +1,7 @@
+using BananaBlast.Screens;
 using Microsoft.Xna.Framework;
 
-using BasicMonoGame.Screens;
-namespace BasicMonoGame.Managers;
+namespace BananaBlast.Managers;
 public class ScreenManager
 {
     private Screen _currentScreen;

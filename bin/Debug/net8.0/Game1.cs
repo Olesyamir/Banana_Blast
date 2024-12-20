@@ -1,9 +1,9 @@
-﻿using Microsoft.Xna.Framework;
+﻿using BananaBlast.Managers;
+using BananaBlast.Screens;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using BasicMonoGame.Managers;
-using BasicMonoGame.Screens;
 
-namespace BasicMonoGame;
+namespace BananaBlast;
 
 public class Game1 : Game
 {

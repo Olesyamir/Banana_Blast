@@ -1,12 +1,11 @@
 using System;
 using System.Collections.Generic;
+using BananaBlast.Entities;
+using BananaBlast.Screens;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-using BasicMonoGame.Screens;
-using BasicMonoGame.Entities;
-
-namespace BasicMonoGame.Managers;
+namespace BananaBlast.Managers;
 
 
 public static class MonstreManager

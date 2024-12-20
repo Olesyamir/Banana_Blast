@@ -1,14 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Xml.Serialization;
+using BananaBlast.Entities;
+using BananaBlast.Managers;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-using BasicMonoGame.Entities;
-using BasicMonoGame.Managers;
-
-namespace BasicMonoGame.Screens;
+namespace BananaBlast.Screens;
 
 [XmlRoot("jeu",Namespace ="http://www.univ-grenoble-alpes.fr/jeu_monstres" )][Serializable]
 public class InGameScreen : Screen

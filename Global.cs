@@ -1,13 +1,12 @@
 using System;
+using BananaBlast.Entities;
+using BananaBlast.Managers;
+using BananaBlast.Screens;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 
-using BasicMonoGame.Screens;
-using BasicMonoGame.Entities;
-using BasicMonoGame.Managers;
-
-namespace BasicMonoGame;
+namespace BananaBlast;
 
 public static class Global
 {

@@ -1,6 +1,6 @@
 using Microsoft.Xna.Framework;
 
-namespace BasicMonoGame.Entities;
+namespace BananaBlast.Entities;
 
 public class Moves
 {

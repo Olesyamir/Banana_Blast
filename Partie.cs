@@ -1,7 +1,7 @@
 using System;
 using System.Xml.Serialization;
 
-namespace BasicMonoGame;
+namespace BananaBlast;
 
 [Serializable]
 [XmlRoot("partie", Namespace = "http://www.univ-grenoble-alpes.fr/partie")]

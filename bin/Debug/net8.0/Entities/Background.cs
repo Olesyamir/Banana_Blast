@@ -1,7 +1,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace BasicMonoGame.Entities;
+namespace BananaBlast.Entities;
 
 public class Background :GameObject
 {

@@ -1,10 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Xml.Serialization;
-using Microsoft. Xna. Framework;
-using Microsoft. Xna. Framework. Graphics;
-using BasicMonoGame.Animations;
-namespace BasicMonoGame.Entities;
+using BananaBlast.Animations;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+
+namespace BananaBlast.Entities;
 
 
 

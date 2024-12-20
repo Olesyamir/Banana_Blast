@@ -1,6 +1,6 @@
 using Microsoft.Xna.Framework;
 
-namespace BasicMonoGame.Screens;
+namespace BananaBlast.Screens;
 
 public abstract class Screen
 {

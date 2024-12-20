@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Xml.Serialization;
 
-namespace BasicMonoGame.Entities;
+namespace BananaBlast.Entities;
 //Cette classe sert pour la serialisation et deserialisation
 [Serializable]
 [XmlRoot("projectiles")]

@@ -1,4 +1,4 @@
-namespace BasicMonoGame.Screens;
+namespace BananaBlast.Screens;
 
 public enum ScreenState
 {

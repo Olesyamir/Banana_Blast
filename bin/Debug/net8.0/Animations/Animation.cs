@@ -1,8 +1,9 @@
 using System.Collections.Generic;
+using BananaBlast.Entities;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using BasicMonoGame.Entities;
-namespace BasicMonoGame.Animations;
+
+namespace BananaBlast.Animations;
 
 public class Animation
 {

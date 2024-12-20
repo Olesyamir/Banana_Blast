@@ -1,10 +1,10 @@
+using BananaBlast.Entities;
+using BananaBlast.Managers;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft. Xna. Framework. Input ;
-using BasicMonoGame.Managers;
-using BasicMonoGame.Entities;
+using Microsoft.Xna.Framework.Input;
 
-namespace BasicMonoGame.Screens;
+namespace BananaBlast.Screens;
 
 public class MainMenuScreen : Screen
 {

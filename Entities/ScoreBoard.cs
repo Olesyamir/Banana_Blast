@@ -1,8 +1,8 @@
+using BananaBlast.Screens;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using BasicMonoGame.Screens;
 
-namespace BasicMonoGame.Entities;
+namespace BananaBlast.Entities;
 
 public static class Scoreboard
 {

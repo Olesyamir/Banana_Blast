@@ -1,5 +1,5 @@
 
-namespace BasicMonoGame.ValidationXML;
+namespace BananaBlast.ValidationXML;
 
 public class Test
 {

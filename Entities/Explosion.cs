@@ -1,8 +1,8 @@
+using BananaBlast.Animations;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using BasicMonoGame.Animations;
 
-namespace BasicMonoGame.Entities;
+namespace BananaBlast.Entities;
 
 public class Explosion:GameObject
 {

@@ -1,10 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Xml.Serialization;
-using Microsoft. Xna. Framework;
-using Microsoft. Xna. Framework. Graphics;
-using BasicMonoGame.Animations;
-namespace BasicMonoGame.Entities;
+using BananaBlast.Animations;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+
+namespace BananaBlast.Entities;
 
 
 
@@ -108,7 +109,7 @@ public class Monstre : GameObject
 
     public void Update(GameTime gameTime)
     {
-        if (_texture == null)
+        if (_texture == null)//lors de la serialisation ou du chargement au cas où la texture n'est pas chargé on remet toutes les valeurs
         {
             if (_typemonstre == TypeMonstre.Petit)
             {

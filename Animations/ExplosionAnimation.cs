@@ -1,9 +1,8 @@
-using System;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace BasicMonoGame.Animations;
+namespace BananaBlast.Animations;
 
 public class ExplosionAnimation
 {

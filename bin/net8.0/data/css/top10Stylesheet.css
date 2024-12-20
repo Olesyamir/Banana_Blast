@@ -1,0 +1,23 @@
+html {
+    color: #a7d0c9;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-image: url("../../Content/Purple_Nebula.png");
+}
+
+@font-face {
+    font-family: OuterSpace;
+    src: url(../../Content/OuterSpace.ttf);
+}
+
+h1 {
+    font-size: 2em;
+    text-align: center;
+    font-family: OuterSpace;
+}
+
+li {
+    margin-bottom: 1em;
+}
+
+
+

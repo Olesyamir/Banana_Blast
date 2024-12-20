@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<fichiers xmlns="http://www.univ-grenoble-alpes.fr/l3miage/files" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.univ-grenoble-alpes.fr/l3miage/files  ../xsd/Fichiers.xsd">
+  <fichier>Partie0.xml</fichier>
+  <fichier>Partie1.xml</fichier>
+  <fichier>Partie2.xml</fichier>
+  <fichier>Partie3.xml</fichier>
+  <fichier>Partie4.xml</fichier>
+</fichiers>

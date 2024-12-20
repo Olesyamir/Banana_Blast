@@ -1,8 +1,9 @@
 using System.Collections.Generic;
+using BananaBlast.Entities;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using BasicMonoGame.Entities;
-namespace BasicMonoGame.Managers;
+
+namespace BananaBlast.Managers;
 
 
 public class BackgroundManager

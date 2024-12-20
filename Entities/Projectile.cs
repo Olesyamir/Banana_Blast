@@ -1,8 +1,9 @@
 using System;
 using System.Xml.Serialization;
-using Microsoft. Xna. Framework;
-using Microsoft. Xna. Framework. Graphics;
-namespace BasicMonoGame.Entities;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+
+namespace BananaBlast.Entities;
 
 [Serializable][XmlRoot("projectile",Namespace = "http://www.univ-grenoble-alpes.fr/jeu_monstres")]
 public class Projectile : GameObject

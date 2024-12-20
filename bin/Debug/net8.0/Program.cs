@@ -1,2 +1,4 @@
-﻿using var game = new BasicMonoGame.Game1();
+﻿using BananaBlast;
+
+using var game = new Game1();
 game.Run();

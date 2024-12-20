@@ -1,8 +1,7 @@
 using System.IO;
-
-namespace BasicMonoGame.Managers;
-
 using System.Xml.Serialization;
+
+namespace BananaBlast.Managers;
 
 /* An XMLManager is used to Serialize (save) /Deserialize (load) XML documents and Objects.
 It's a generic class that must be specialized for a particular object that corresponds to the XML document.

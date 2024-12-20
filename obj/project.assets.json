@@ -243,11 +243,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jon4t\\RiderProjects\\BasicMonoGame\\BasicMonoGame.csproj",
-      "projectName": "BasicMonoGame",
-      "projectPath": "C:\\Users\\jon4t\\RiderProjects\\BasicMonoGame\\BasicMonoGame.csproj",
+      "projectUniqueName": "C:\\Users\\jon4t\\Downloads\\BananaBlast\\BananaBlast.csproj",
+      "projectName": "BananaBlast",
+      "projectPath": "C:\\Users\\jon4t\\Downloads\\BananaBlast\\BananaBlast.csproj",
       "packagesPath": "C:\\Users\\jon4t\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jon4t\\RiderProjects\\BasicMonoGame\\obj\\",
+      "outputPath": "C:\\Users\\jon4t\\Downloads\\BananaBlast\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jon4t\\AppData\\Roaming\\NuGet\\NuGet.Config"
