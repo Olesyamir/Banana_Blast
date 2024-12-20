@@ -1,14 +1,10 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/Boxybold.spritefont","C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/bin/DesktopGL/Boxybold.xnb","FontDescriptionProcessor","SpriteFontContent",2071,37922,0,1854807
-"C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/cosmofighter.png","C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/bin/DesktopGL/cosmofighter.xnb","TextureProcessor","Texture2DContent",36983,318829,0,0299
-"C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/enemy2.png","C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/bin/DesktopGL/enemy2.xnb","TextureProcessor","Texture2DContent",722094,3383365,0,1266517
-"C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/missile1.png","C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/bin/DesktopGL/missile1.xnb","TextureProcessor","Texture2DContent",1045,16469,0,0022783
-"C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/NpcWeed.png","C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/bin/DesktopGL/NpcWeed.xnb","TextureProcessor","Texture2DContent",9388,93269,0,0047567
-"C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/Nyan.png","C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/bin/DesktopGL/Nyan.xnb","TextureProcessor","Texture2DContent",77870,828085,0,0263594
-"C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/outerspace.spritefont","C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/bin/DesktopGL/outerspace.xnb","FontDescriptionProcessor","SpriteFontContent",2073,37922,0,0142738
-"C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/Purple_Nebula.png","C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/bin/DesktopGL/Purple_Nebula.xnb","TextureProcessor","Texture2DContent",1146371,4194389,0,1587487
-"C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/rb_11922.png","C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/bin/DesktopGL/rb_11922.xnb","TextureProcessor","Texture2DContent",628437,6797653,0,2175878
-"C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/ship1.png","C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/bin/DesktopGL/ship1.xnb","TextureProcessor","Texture2DContent",60527,158005,0,0066004
-"C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/ship2.png","C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/bin/DesktopGL/ship2.xnb","TextureProcessor","Texture2DContent",3101,25685,0,0045859
-"C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/ship3.png","C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/bin/DesktopGL/ship3.xnb","TextureProcessor","Texture2DContent",36319,785653,0,0212149
-"C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/virus1.png","C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/bin/DesktopGL/virus1.xnb","TextureProcessor","Texture2DContent",86138,138465,0,0065677
+"C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/Boxybold.spritefont","C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/bin/DesktopGL/Boxybold.xnb","FontDescriptionProcessor","SpriteFontContent",2071,37922,0,1960525
+"C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/enemy2.png","C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/bin/DesktopGL/enemy2.xnb","TextureProcessor","Texture2DContent",722094,3383365,0,1297646
+"C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/Fond_saved.png","C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/bin/DesktopGL/Fond_saved.xnb","TextureProcessor","Texture2DContent",4465,1308885,0,0302993
+"C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/missile1.png","C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/bin/DesktopGL/missile1.xnb","TextureProcessor","Texture2DContent",1045,16469,0,0038264
+"C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/NpcWeed.png","C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/bin/DesktopGL/NpcWeed.xnb","TextureProcessor","Texture2DContent",14787,96853,0,0048536
+"C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/outerspace.spritefont","C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/bin/DesktopGL/outerspace.xnb","FontDescriptionProcessor","SpriteFontContent",2073,37922,0,0175736
+"C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/Purple_Nebula.png","C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/bin/DesktopGL/Purple_Nebula.xnb","TextureProcessor","Texture2DContent",1146371,4194389,0,1327181
+"C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/rb_11922.png","C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/bin/DesktopGL/rb_11922.xnb","TextureProcessor","Texture2DContent",628437,6797653,0,1450104
+"C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/ship2.png","C:/Users/jon4t/RiderProjects/BasicMonoGame/Content/bin/DesktopGL/ship2.xnb","TextureProcessor","Texture2DContent",3101,25685,0,0064881
