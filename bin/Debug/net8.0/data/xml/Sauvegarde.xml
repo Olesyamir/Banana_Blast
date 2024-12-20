@@ -2,24 +2,22 @@
 <jeu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.univ-grenoble-alpes.fr/jeu_monstres">
   <date>2024-12-20</date>
   <joueur>
-    <nom>TRRUNG</nom>
-    <age>20</age>
+    <nom>SD</nom>
+    <age>77</age>
     <health>100</health>
     <position>
-      <X>219.751</X>
+      <X>289.34653</X>
       <Y>720</Y>
     </position>
-    <score>7</score>
+    <score>8</score>
   </joueur>
-  <monstres>
-    <monstre>
-      <health>50</health>
+  <monstres />
+  <projectiles>
+    <projectile>
       <position>
-        <X>137</X>
-        <Y>61.5</Y>
+        <X>320.94833</X>
+        <Y>175</Y>
       </position>
-      <type>Petit</type>
-    </monstre>
-  </monstres>
-  <projectiles />
+    </projectile>
+  </projectiles>
 </jeu>

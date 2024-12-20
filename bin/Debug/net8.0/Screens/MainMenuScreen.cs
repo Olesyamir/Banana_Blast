@@ -96,7 +96,7 @@ public class MainMenuScreen : Screen
                 Global._ScreenManager.ChangeScreen(jeu);
                 break;
             case 2:
-                // Application des feuilles Xslt
+                // Application de la feuille Xslt
                 XmlUtils.XslTransform("./data/xml/Fichiers.xml", "./data/xslt/top10Meilleurs.xslt", "./data/html/Les10Meilleurs.html");
                 //ouvre la page
                 XmlUtils.OpenHtmlFile("data\\html\\Les10Meilleurs.html");

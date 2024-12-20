@@ -89,3 +89,5 @@ C:\Users\jon4t\RiderProjects\BasicMonoGame\bin\Debug\net8.0\Content\Fond_saved.p
 C:\Users\jon4t\RiderProjects\BasicMonoGame\bin\Debug\net8.0\data\xml\Partie0.xml
 C:\Users\jon4t\RiderProjects\BasicMonoGame\bin\Debug\net8.0\data\xml\Partie1.xml
 C:\Users\jon4t\RiderProjects\BasicMonoGame\bin\Debug\net8.0\data\xml\Partie2.xml
+C:\Users\jon4t\RiderProjects\BasicMonoGame\bin\Debug\net8.0\data\xml\Partie3.xml
+C:\Users\jon4t\RiderProjects\BasicMonoGame\bin\Debug\net8.0\data\xml\Partie4.xml

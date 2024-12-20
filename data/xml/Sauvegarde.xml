@@ -2,24 +2,15 @@
 <jeu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.univ-grenoble-alpes.fr/jeu_monstres">
   <date>2024-12-20</date>
   <joueur>
-    <nom>JO</nom>
-    <age>20</age>
+    <nom>KKA</nom>
+    <age>78</age>
     <health>100</health>
     <position>
-      <X>329.8991</X>
+      <X>236.45001</X>
       <Y>720</Y>
     </position>
-    <score>7</score>
+    <score>0</score>
   </joueur>
-  <monstres>
-    <monstre>
-      <health>50</health>
-      <position>
-        <X>211</X>
-        <Y>301.5</Y>
-      </position>
-      <type>Petit</type>
-    </monstre>
-  </monstres>
+  <monstres />
   <projectiles />
 </jeu>

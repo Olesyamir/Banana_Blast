@@ -17,8 +17,7 @@ public static class Global
     public static bool IsEntree = false;
 
     public static bool IsSaved = false;
-
-    public static float _Temps { get; set; }
+    
     
 
     public static Joueur _joueur { get; set; }

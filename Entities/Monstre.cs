@@ -108,7 +108,7 @@ public class Monstre : GameObject
 
     public void Update(GameTime gameTime)
     {
-        if (_texture == null)
+        if (_texture == null)//lors de la serialisation ou du chargement au cas où la texture n'est pas chargé on remet toutes les valeurs
         {
             if (_typemonstre == TypeMonstre.Petit)
             {

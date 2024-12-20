@@ -26,7 +26,6 @@ public class GameOverScreen : Screen
         
         //Mise à jour du fichier xml contenant les infos de toutes les parties
         XmlUtils.XslTransform("data/xml/Fichiers.xml", "data/xslt/SavedGames.xslt", "./data/xml/SavedGames.xml");
-        //Pour voir la transformation parce que seule celui dans bin/Debug/net8.0 est changé
     }
 
     public override void LoadContent()
