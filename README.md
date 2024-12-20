@@ -7,7 +7,7 @@ Des bananes piégées, transformées en objets de destruction, tombent à traver
 1. Clone la répertoire git
 """
 git clone [https://github.com/Olesyamir/jeu_mostre.git](https://github.com/Olesyamir/Banana_Blast.git)
-"""
+2. Normalement, après unzip le projet, vous aurez probablement un problème avec dotnet tool restore. Veuillez entrer ces 2 commandes: dotnet new tool-manifest --force puis dotnet tool install --local dotnet-mgcb.
 3. Ouvrir un IDE et lancer le jeu. Amusez-vous bien !!! 
 
 
