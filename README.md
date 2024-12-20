@@ -1,14 +1,7 @@
-# jeu_mostre
+# BANANA BLAST
 
-## Quelques convention de travail
-### D'abord, clone 
-### Puis: taper "git branch" pour vérifier ta branch actuelle
-### Si t'es dans main (normalement), taper "git checkout -b <nom_de_ta_branche>" afin de te mettre dans ta branche
-### git branch encore 1 fois pour assurer la bonne branche
-### Taper "git add ." pour mettre à jour tous les changements dans ta branch 
-### taper "git commit -m <description de tes changements>" 
-### Enfin: "git push -u origin <nom de ta branche>"
-#### si t'as un problème avec cette commande, accède à https://github.com/settings/tokens 
+## Description du jeu
+Des bananes piégées, transformées en objets de destruction, tombent à travers l'espace et menacent d'envahir diverses planètes. Ces bananes ne sont pas ordinaires : elles sont contrôlées par une force mystérieuse et se dirigent lentement vers la surface des planètes, menaçant de détruire tout sur leur passage. Le joueur incarne un vaisseau spatial chargé de détruire ces bananes avant qu'elles n'atteignent les planètes. Pour ce faire, le vaisseau doit se déplacer, intercepter les bananes et les faire exploser. L'objectif est de sauver les planètes et d'empêcher les bananes d'atteindre la ligne d'impact.
 
 
 
